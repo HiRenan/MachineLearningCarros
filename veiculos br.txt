@@ -1,0 +1,11 @@
+Variáveis
+
+Marca – fabricante do veículo.
+Modelo – modelo do veículo.
+Ano – ano de fabricação.
+Quilometragem – distância percorrida pelo veículo.
+Cor – cor do carro.
+Cambio – tipo de câmbio (manual ou automático).
+Combustivel – tipo de combustível (flex, gasolina ou diesel).
+Portas – número de portas do veículo.
+Valor_Venda – valor de venda do carro (variável alvo).
