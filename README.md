@@ -46,30 +46,43 @@ O projeto baseia-se na metodologia CRISP-DM, um framework padrão da indústria 
 ## Arquitetura do Projeto
 
 ```
-projeto-carros-brasil/
+DesafioFinalML/
 ├── data/
-│   ├── raw/                    # Dados brutos originais
-│   ├── processed/              # Dados processados
-│   └── external/               # Dados externos auxiliares
+│   ├── raw/                    # dataset_carros_brasil.csv
+│   ├── processed/              # Dados limpos e transformados
+│   └── external/               # Dados auxiliares (se necessário)
 ├── notebooks/
-│   ├── 01_exploratory_analysis.ipynb
-│   ├── 02_data_preparation.ipynb
-│   ├── 03_modeling.ipynb
-│   └── 04_evaluation.ipynb
+│   ├── 01_business_understanding.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 03_data_preparation.ipynb
+│   ├── 04_modeling.ipynb
+│   ├── 05_evaluation.ipynb
+│   └── 06_deployment_preparation.ipynb
 ├── src/
-│   ├── data/                   # Scripts de processamento
-│   ├── features/               # Engenharia de features
-│   ├── models/                 # Algoritmos de ML
-│   └── visualization/          # Funções de plotagem
-├── models/                     # Modelos treinados serializados
+│   ├── data/
+│   │   ├── load_data.py        # Carregamento de dados
+│   │   └── preprocess.py       # Preprocessamento
+│   ├── features/
+│   │   └── engineering.py      # Feature engineering
+│   ├── models/
+│   │   ├── train.py            # Treinamento de modelos
+│   │   └── predict.py          # Predições
+│   └── utils/
+│       └── helpers.py          # Funções auxiliares
+├── models/
+│   └── trained_models/         # Modelos serializados (.pkl/.joblib)
 ├── reports/
-│   ├── figures/                # Visualizações geradas
-│   └── metrics/                # Relatórios de performance
-├── deployment/                 # Arquivos para deploy
+│   ├── figures/                # Gráficos e visualizações
+│   └── metrics/                # Métricas de performance
+├── deployment/
+│   ├── app.py                  # Aplicação Streamlit principal
+│   ├── model_handler.py        # Carregamento de modelos
+│   └── utils.py                # Utilitários para deploy
 ├── mlruns/                     # Experimentos MLflow
 ├── requirements.txt            # Dependências Python
+├── runtime.txt                 # Versão Python para Hugging Face
 ├── README.md                   # Documentação principal
-└── CLAUDE.md                   # Orientações para desenvolvimento
+└── CLAUDE.md                   # Orientações técnicas detalhadas
 ```
 
 ## Pré-requisitos Técnicos
@@ -95,8 +108,8 @@ projeto-carros-brasil/
 ### 1. Clonagem do Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/projeto-carros-brasil.git
-cd projeto-carros-brasil
+git clone https://github.com/seu-usuario/DesafioFinalML.git
+cd DesafioFinalML
 ```
 
 ### 2. Ambiente Virtual
@@ -117,41 +130,47 @@ pip install -r requirements.txt
 ### 4. Configuração MLflow
 
 ```bash
-mlflow ui
+# Iniciar MLflow UI em porta específica
+mlflow ui --port 5000
+
+# Acessar interface em: http://localhost:5000
 ```
 
 ## Execução dos Experimentos
 
-### Pipeline Completo
+### Pipeline Completo (Sequência CRISP-DM)
 
 ```bash
-# 1. Análise exploratória
-jupyter notebook notebooks/01_exploratory_analysis.ipynb
+# 1. Business Understanding
+jupyter notebook notebooks/01_business_understanding.ipynb
 
-# 2. Preparação dos dados
-python src/data/prepare_data.py
+# 2. Data Understanding (EDA)
+jupyter notebook notebooks/02_data_understanding.ipynb
 
-# 3. Treinamento dos modelos
-python src/models/train_models.py
+# 3. Data Preparation
+jupyter notebook notebooks/03_data_preparation.ipynb
 
-# 4. Avaliação comparativa
-python src/models/evaluate_models.py
+# 4. Modeling
+jupyter notebook notebooks/04_modeling.ipynb
 
-# 5. Geração de relatórios
-python src/reports/generate_report.py
+# 5. Evaluation
+jupyter notebook notebooks/05_evaluation.ipynb
+
+# 6. Deployment Preparation
+jupyter notebook notebooks/06_deployment_preparation.ipynb
 ```
 
-### Execução Individual
+### Execução via Scripts
 
 ```bash
-# Apenas preprocessamento
+# Preprocessamento de dados
 python src/data/preprocess.py
 
-# Treinamento de modelo específico
-python src/models/train_model.py --algorithm random_forest
+# Treinamento de todos os modelos
+python src/models/train.py
 
-# Predição em novos dados
-python src/models/predict.py --input data/new_cars.csv
+# Predições com modelo treinado
+python src/models/predict.py
 ```
 
 ## Metodologia CRISP-DM Aplicada
@@ -176,11 +195,11 @@ Caracterização estatística do dataset, identificação de padrões, detecçã
 
 Implementação e treinamento de múltiplos algoritmos:
 
-- Regressão Linear
-- Random Forest Regressor
-- Gradient Boosting (XGBoost, LightGBM)
-- Support Vector Regression
-- Redes Neurais (MLPRegressor)
+- **Regressão Linear**: Baseline e interpretabilidade
+- **Random Forest**: Robustez e feature importance
+- **XGBoost**: Performance e otimização avançada
+- **LightGBM**: Eficiência computacional
+- **Support Vector Regression**: Robustez a outliers
 
 ### 5. Evaluation
 
@@ -228,16 +247,25 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db
 - Deta Space
 - Heroku
 
-### Configuração de Deploy
+### Deploy Local
 
 ```bash
-# Streamlit local
+# Executar aplicação Streamlit
 streamlit run deployment/app.py
 
-# Docker containerization
-docker build -t car-price-predictor .
-docker run -p 8501:8501 car-price-predictor
+# Acessar em: http://localhost:8501
 ```
+
+### Deploy no Hugging Face Spaces
+
+1. Criar novo Space no Hugging Face
+2. Selecionar SDK: Streamlit
+3. Fazer upload dos arquivos:
+   - `deployment/app.py` (renomear para `app.py`)
+   - `requirements.txt`
+   - `runtime.txt`
+   - Modelos treinados
+4. O deploy será automático
 
 ## Resultados Esperados
 
@@ -293,6 +321,19 @@ fix: corrige bug na validação cruzada
 docs: atualiza documentação da API
 test: adiciona testes para preprocessamento
 ```
+
+## Links Importantes
+
+- **Repositório GitHub**: [Link para o repositório]
+- **Deploy Hugging Face Spaces**: [Link para a aplicação]
+- **MLflow Tracking**: [Link para experimentos]
+
+## Status do Projeto
+
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![ML](https://img.shields.io/badge/ML-Scikit--Learn-orange)
+![Deploy](https://img.shields.io/badge/Deploy-Hugging%20Face-green)
 
 ## Licença
 

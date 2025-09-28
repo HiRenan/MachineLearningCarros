@@ -1,0 +1,45 @@
+{
+  "dataset_info": {
+    "shape": [
+      10000,
+      16
+    ],
+    "timespan": "2000.0-2023.0",
+    "memory_mb": 3.5412731170654297
+  },
+  "price_analysis": {
+    "mean": 83097.48684,
+    "median": 58905.7,
+    "std": 166858.22213433936,
+    "skewness": 6.693240958563185,
+    "coefficient_variation": 200.79815705571988
+  },
+  "market_share": {
+    "Volkswagen": 1053,
+    "Nissan": 1034,
+    "Honda": 1021,
+    "Ford": 1017,
+    "Fiat": 996,
+    "Renault": 994,
+    "Chevrolet": 985,
+    "Hyundai": 971,
+    "Jeep": 967,
+    "Toyota": 962
+  },
+  "correlations": {
+    "Ano": 0.050768977300485865,
+    "Quilometragem": -0.07865042411294043,
+    "Portas": -0.006097568282254405,
+    "Valor_Venda": 1.0
+  },
+  "anomalies_summary": {
+    "temporal_anomalies": [],
+    "business_logic_anomalies": [
+      "992 carros antigos com baixa quilometragem",
+      "200 carros com preços muito altos (>R$300k)"
+    ],
+    "statistical_anomalies": [],
+    "data_quality_issues": []
+  },
+  "timestamp": "2025-09-28T18:09:41.405782"
+}
