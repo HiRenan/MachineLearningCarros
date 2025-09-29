@@ -99,34 +99,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Machine Learning specific
-models/trained_models/*.pkl
-models/trained_models/*.joblib
-models/trained_models/*.h5
-models/trained_models/*.pth
-models/trained_models/*.onnx
-
-# MLflow
-mlruns/
-mlartifacts/
-
-# Data files (keep structure, ignore large datasets)
-data/raw/*.csv
-data/processed/*.csv
-data/external/*.csv
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/external/.gitkeep
-
-# Generated reports and figures
-reports/figures/*.png
-reports/figures/*.jpg
-reports/figures/*.pdf
-reports/metrics/*.json
-reports/metrics/*.csv
-!reports/figures/.gitkeep
-!reports/metrics/.gitkeep
-
 # IDE specific
 .vscode/
 .idea/
