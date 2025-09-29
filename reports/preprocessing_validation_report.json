@@ -1,0 +1,3322 @@
+{
+  "timestamp": "2025-09-29T12:01:20.480155",
+  "pipeline_info": {
+    "original_features": 8,
+    "processed_features": 38,
+    "features_created": 30,
+    "feature_groups": {
+      "temporal": 14,
+      "brand": 7,
+      "interaction": 3,
+      "categorical": 9,
+      "cluster": 8,
+      "outlier": 3
+    }
+  },
+  "quality_analysis": {
+    "timestamp": "2025-09-29T12:01:06.521025",
+    "dataset_info": {
+      "n_samples": 10000,
+      "n_features": 38,
+      "target_mean": 83097.48684,
+      "target_std": 166858.22213433936
+    },
+    "correlation_analysis": {
+      "individual_correlations": {
+        "Marca": {
+          "pearson": {
+            "correlation": 0.005981301131724078,
+            "p_value": 0.5497994373563012
+          },
+          "spearman": {
+            "correlation": 0.10268098159430901,
+            "p_value": 7.49696463562543e-25
+          },
+          "kendall": {
+            "correlation": 0.07435030311668213,
+            "p_value": 2.1652916191980367e-26
+          },
+          "abs_pearson": 0.005981301131724078,
+          "significant": "True"
+        },
+        "Modelo": {
+          "pearson": {
+            "correlation": 0.08518300981260521,
+            "p_value": 1.4291193120415068e-17
+          },
+          "spearman": {
+            "correlation": 0.44701674187687995,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.3089932377021446,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.08518300981260521,
+          "significant": "True"
+        },
+        "Ano": {
+          "pearson": {
+            "correlation": 0.050637725903707465,
+            "p_value": 4.054312284594082e-07
+          },
+          "spearman": {
+            "correlation": 0.4577932584885457,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.31923569901215115,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.050637725903707465,
+          "significant": "True"
+        },
+        "Quilometragem": {
+          "pearson": {
+            "correlation": -0.07825755859680168,
+            "p_value": 4.621813798739961e-15
+          },
+          "spearman": {
+            "correlation": -0.5185053742770392,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.3591878841140327,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.07825755859680168,
+          "significant": "True"
+        },
+        "Idade_Veiculo": {
+          "pearson": {
+            "correlation": -0.05063772590370748,
+            "p_value": 4.054312284594082e-07
+          },
+          "spearman": {
+            "correlation": -0.4577932584885457,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.31923569901215115,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.05063772590370748,
+          "significant": "True"
+        },
+        "Eficiencia_Km": {
+          "pearson": {
+            "correlation": -0.011071526188873587,
+            "p_value": 0.2682731139704619
+          },
+          "spearman": {
+            "correlation": -0.09723354246016892,
+            "p_value": 1.933281082189108e-22
+          },
+          "kendall": {
+            "correlation": -0.06351876760813342,
+            "p_value": 1.6918551559026614e-21
+          },
+          "abs_pearson": 0.011071526188873587,
+          "significant": "True"
+        },
+        "Depreciacao_Estimada": {
+          "pearson": {
+            "correlation": 0.04594285946246434,
+            "p_value": 4.303927482297412e-06
+          },
+          "spearman": {
+            "correlation": 0.4575838090808656,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.3190869822922789,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.04594285946246434,
+          "significant": "True"
+        },
+        "Marca_Preco_Medio": {
+          "pearson": {
+            "correlation": 0.06585811201489422,
+            "p_value": 4.335166849704678e-11
+          },
+          "spearman": {
+            "correlation": 0.5032710967640364,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.35866299728551143,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.06585811201489422,
+          "significant": "True"
+        },
+        "Marca_Elasticidade": {
+          "pearson": {
+            "correlation": 0.030144785976223696,
+            "p_value": 0.0025715991499802833
+          },
+          "spearman": {
+            "correlation": 0.3861737069563108,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.2630785893614195,
+            "p_value": 1.358443160793235e-309
+          },
+          "abs_pearson": 0.030144785976223696,
+          "significant": "True"
+        },
+        "Marca_Volume": {
+          "pearson": {
+            "correlation": -0.024358426003840666,
+            "p_value": 0.014854811362713834
+          },
+          "spearman": {
+            "correlation": -0.22004406568697277,
+            "p_value": 6.428151514423444e-110
+          },
+          "kendall": {
+            "correlation": -0.1489437102277351,
+            "p_value": 1.2794185455746e-100
+          },
+          "abs_pearson": 0.024358426003840666,
+          "significant": "True"
+        },
+        "Idade_x_Km": {
+          "pearson": {
+            "correlation": -0.08296746852225673,
+            "p_value": 9.567031434755724e-17
+          },
+          "spearman": {
+            "correlation": -0.6523276927730093,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.4748024457080833,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.08296746852225673,
+          "significant": "True"
+        },
+        "Km_por_Porta": {
+          "pearson": {
+            "correlation": -0.06759909173581609,
+            "p_value": 1.3165733794663282e-11
+          },
+          "spearman": {
+            "correlation": -0.47764648247335884,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.3280406013072963,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.06759909173581609,
+          "significant": "True"
+        },
+        "Marca_x_Idade": {
+          "pearson": {
+            "correlation": 0.04609275741831096,
+            "p_value": 4.0044698808502885e-06
+          },
+          "spearman": {
+            "correlation": 0.5688889832442654,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.3985406126740902,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.04609275741831096,
+          "significant": "True"
+        },
+        "Intensidade_Uso": {
+          "pearson": {
+            "correlation": -0.011071526188873587,
+            "p_value": 0.2682731139704619
+          },
+          "spearman": {
+            "correlation": -0.09723354246016892,
+            "p_value": 1.933281082189108e-22
+          },
+          "kendall": {
+            "correlation": -0.06351876760813342,
+            "p_value": 1.6918551559026614e-21
+          },
+          "abs_pearson": 0.011071526188873587,
+          "significant": "True"
+        },
+        "Sweet_Spot": {
+          "pearson": {
+            "correlation": 0.027260155312517055,
+            "p_value": 0.006407178630927887
+          },
+          "spearman": {
+            "correlation": 0.23368926945852164,
+            "p_value": 4.077986930446051e-124
+          },
+          "kendall": {
+            "correlation": 0.19085372865938388,
+            "p_value": 9.09528993731909e-121
+          },
+          "abs_pearson": 0.027260155312517055,
+          "significant": "True"
+        },
+        "Modelo_Raridade": {
+          "pearson": {
+            "correlation": 0.04555018054431863,
+            "p_value": 5.193544102707473e-06
+          },
+          "spearman": {
+            "correlation": 0.39623143583677184,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.2750954344282902,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.04555018054431863,
+          "significant": "True"
+        },
+        "Is_Premium_Brand": {
+          "pearson": {
+            "correlation": 0.0588899521915861,
+            "p_value": 3.783889562602888e-09
+          },
+          "spearman": {
+            "correlation": 0.5505726310218032,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.44965196635598687,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.0588899521915861,
+          "significant": "True"
+        },
+        "Is_Novo": {
+          "pearson": {
+            "correlation": 0.020619161114068273,
+            "p_value": 0.03921939657184194
+          },
+          "spearman": {
+            "correlation": 0.26184686376994665,
+            "p_value": 1.90455661093769e-156
+          },
+          "kendall": {
+            "correlation": 0.21385000006228447,
+            "p_value": 4.109745646410386e-151
+          },
+          "abs_pearson": 0.020619161114068273,
+          "significant": "True"
+        },
+        "Cluster": {
+          "pearson": {
+            "correlation": 0.05255325117247542,
+            "p_value": 1.4539179112710054e-07
+          },
+          "spearman": {
+            "correlation": 0.4806441846990233,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.38044065013876005,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.05255325117247542,
+          "significant": "True"
+        },
+        "Distancia_Centroide": {
+          "pearson": {
+            "correlation": 0.013225389346430349,
+            "p_value": 0.18602452594185928
+          },
+          "spearman": {
+            "correlation": 0.044878272735580184,
+            "p_value": 7.138111256029993e-06
+          },
+          "kendall": {
+            "correlation": 0.03159661367602627,
+            "p_value": 2.161395125202104e-06
+          },
+          "abs_pearson": 0.013225389346430349,
+          "significant": "True"
+        },
+        "Idade_vs_Cluster": {
+          "pearson": {
+            "correlation": -0.026979580062663888,
+            "p_value": 0.00697340089330498
+          },
+          "spearman": {
+            "correlation": -0.24252177841385675,
+            "p_value": 8.197055752971142e-134
+          },
+          "kendall": {
+            "correlation": -0.16425748886851135,
+            "p_value": 4.82224084042704e-130
+          },
+          "abs_pearson": 0.026979580062663888,
+          "significant": "True"
+        },
+        "Km_vs_Cluster": {
+          "pearson": {
+            "correlation": -0.06420470475314159,
+            "p_value": 1.307484527705828e-10
+          },
+          "spearman": {
+            "correlation": -0.38287319129810093,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.2605323580886972,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.06420470475314159,
+          "significant": "True"
+        },
+        "Cluster_Size": {
+          "pearson": {
+            "correlation": -0.04083755504083522,
+            "p_value": 4.408650401444555e-05
+          },
+          "spearman": {
+            "correlation": -0.26174588801543386,
+            "p_value": 2.530403941454342e-156
+          },
+          "kendall": {
+            "correlation": -0.1945966794623891,
+            "p_value": 2.888335324266163e-139
+          },
+          "abs_pearson": 0.04083755504083522,
+          "significant": "True"
+        },
+        "Cluster_Percentage": {
+          "pearson": {
+            "correlation": -0.03549851489473049,
+            "p_value": 0.0003844611397751389
+          },
+          "spearman": {
+            "correlation": -0.26174588801543386,
+            "p_value": 2.530403941454342e-156
+          },
+          "kendall": {
+            "correlation": -0.1945966794623891,
+            "p_value": 2.888335324266163e-139
+          },
+          "abs_pearson": 0.03549851489473049,
+          "significant": "True"
+        },
+        "Idade_Veiculo_ZScore_Cluster": {
+          "pearson": {
+            "correlation": -0.002828903515250606,
+            "p_value": 0.7772875664253396
+          },
+          "spearman": {
+            "correlation": 0.010169009257231746,
+            "p_value": 0.30924853773374217
+          },
+          "kendall": {
+            "correlation": 0.007586212093458039,
+            "p_value": 0.2624652671090887
+          },
+          "abs_pearson": 0.002828903515250606,
+          "significant": "False"
+        },
+        "Quilometragem_ZScore_Cluster": {
+          "pearson": {
+            "correlation": -0.004717392069300996,
+            "p_value": 0.6371531728126876
+          },
+          "spearman": {
+            "correlation": 0.010153847987591476,
+            "p_value": 0.309970450748547
+          },
+          "kendall": {
+            "correlation": 0.0070861162358195375,
+            "p_value": 0.28802320726199127
+          },
+          "abs_pearson": 0.004717392069300996,
+          "significant": "False"
+        },
+        "Is_Outlier": {
+          "pearson": {
+            "correlation": 0.015103864046213184,
+            "p_value": 0.13097103995231363
+          },
+          "spearman": {
+            "correlation": 0.12949466165150414,
+            "p_value": 1.1821212263248e-38
+          },
+          "kendall": {
+            "correlation": 0.10575812520164334,
+            "p_value": 2.385974071841863e-38
+          },
+          "abs_pearson": 0.015103864046213184,
+          "significant": "True"
+        },
+        "Outlier_Methods": {
+          "pearson": {
+            "correlation": 0.015103864046213184,
+            "p_value": 0.13097103995231363
+          },
+          "spearman": {
+            "correlation": 0.12949466165150414,
+            "p_value": 1.1821212263248e-38
+          },
+          "kendall": {
+            "correlation": 0.10575812520164334,
+            "p_value": 2.385974071841863e-38
+          },
+          "abs_pearson": 0.015103864046213184,
+          "significant": "True"
+        },
+        "Outlier_Score": {
+          "pearson": {
+            "correlation": -0.019442554010681866,
+            "p_value": 0.0518718067406606
+          },
+          "spearman": {
+            "correlation": -0.23368549546662176,
+            "p_value": 4.116266151564875e-124
+          },
+          "kendall": {
+            "correlation": -0.15601105894200118,
+            "p_value": 5.04226347834371e-121
+          },
+          "abs_pearson": 0.019442554010681866,
+          "significant": "True"
+        },
+        "Marca_Posicionamento_Intermediária": {
+          "pearson": {
+            "correlation": -0.0014226854419169665,
+            "p_value": 0.8868818821905294
+          },
+          "spearman": {
+            "correlation": -0.0965438808359677,
+            "p_value": 3.8213130132639332e-22
+          },
+          "kendall": {
+            "correlation": -0.07884726448709332,
+            "p_value": 4.731856802733923e-22
+          },
+          "abs_pearson": 0.0014226854419169665,
+          "significant": "True"
+        },
+        "Marca_Posicionamento_Premium": {
+          "pearson": {
+            "correlation": 0.05454884869063306,
+            "p_value": 4.808045278245059e-08
+          },
+          "spearman": {
+            "correlation": 0.4522608962875876,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.3693608978423439,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.05454884869063306,
+          "significant": "True"
+        },
+        "Faixa_Idade_Novo": {
+          "pearson": {
+            "correlation": 0.022132181890346613,
+            "p_value": 0.02688299263401605
+          },
+          "spearman": {
+            "correlation": 0.21276591218673083,
+            "p_value": 9.945845522248765e-103
+          },
+          "kendall": {
+            "correlation": 0.17376564943072897,
+            "p_value": 1.913494319076476e-100
+          },
+          "abs_pearson": 0.022132181890346613,
+          "significant": "True"
+        },
+        "Faixa_Idade_Seminovo": {
+          "pearson": {
+            "correlation": 0.021169719840955836,
+            "p_value": 0.03426455314874383
+          },
+          "spearman": {
+            "correlation": 0.21271315849778813,
+            "p_value": 1.1188945237862764e-102
+          },
+          "kendall": {
+            "correlation": 0.1737225655601748,
+            "p_value": 2.1412605037487035e-100
+          },
+          "abs_pearson": 0.021169719840955836,
+          "significant": "True"
+        },
+        "Faixa_Idade_Usado": {
+          "pearson": {
+            "correlation": 0.01837539029787124,
+            "p_value": 0.06614136020671517
+          },
+          "spearman": {
+            "correlation": 0.16388449110815742,
+            "p_value": 3.78879143690857e-61
+          },
+          "kendall": {
+            "correlation": 0.13384425510812398,
+            "p_value": 2.344084223873799e-60
+          },
+          "abs_pearson": 0.01837539029787124,
+          "significant": "True"
+        },
+        "Faixa_Km_Baixa": {
+          "pearson": {
+            "correlation": 0.04653592156706794,
+            "p_value": 3.231443704188779e-06
+          },
+          "spearman": {
+            "correlation": 0.31503986888914576,
+            "p_value": 2.9490135500551653e-229
+          },
+          "kendall": {
+            "correlation": 0.25729265957814546,
+            "p_value": 8.050384043366764e-218
+          },
+          "abs_pearson": 0.04653592156706794,
+          "significant": "True"
+        },
+        "Faixa_Km_Media": {
+          "pearson": {
+            "correlation": 0.03586680988382845,
+            "p_value": 0.0003340086632685057
+          },
+          "spearman": {
+            "correlation": 0.2386809396623027,
+            "p_value": 1.5125221311372435e-129
+          },
+          "kendall": {
+            "correlation": 0.1949304193556961,
+            "p_value": 6.76132850828759e-126
+          },
+          "abs_pearson": 0.03586680988382845,
+          "significant": "True"
+        },
+        "Faixa_Km_Muito_Alta": {
+          "pearson": {
+            "correlation": -0.05391732842756879,
+            "p_value": 6.852999882193955e-08
+          },
+          "spearman": {
+            "correlation": -0.3835549091102774,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": -0.3132488056423172,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.05391732842756879,
+          "significant": "True"
+        },
+        "Cluster_Nome_Médio Seminovo": {
+          "pearson": {
+            "correlation": 0.04291378088106017,
+            "p_value": 1.7641872337674056e-05
+          },
+          "spearman": {
+            "correlation": 0.39433819914801255,
+            "p_value": 0.0
+          },
+          "kendall": {
+            "correlation": 0.3220555048788118,
+            "p_value": 0.0
+          },
+          "abs_pearson": 0.04291378088106017,
+          "significant": "True"
+        }
+      },
+      "top_correlations": [
+        [
+          "Modelo",
+          {
+            "pearson": {
+              "correlation": 0.08518300981260521,
+              "p_value": 1.4291193120415068e-17
+            },
+            "spearman": {
+              "correlation": 0.44701674187687995,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3089932377021446,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.08518300981260521,
+            "significant": "True"
+          }
+        ],
+        [
+          "Idade_x_Km",
+          {
+            "pearson": {
+              "correlation": -0.08296746852225673,
+              "p_value": 9.567031434755724e-17
+            },
+            "spearman": {
+              "correlation": -0.6523276927730093,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.4748024457080833,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.08296746852225673,
+            "significant": "True"
+          }
+        ],
+        [
+          "Quilometragem",
+          {
+            "pearson": {
+              "correlation": -0.07825755859680168,
+              "p_value": 4.621813798739961e-15
+            },
+            "spearman": {
+              "correlation": -0.5185053742770392,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3591878841140327,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.07825755859680168,
+            "significant": "True"
+          }
+        ],
+        [
+          "Km_por_Porta",
+          {
+            "pearson": {
+              "correlation": -0.06759909173581609,
+              "p_value": 1.3165733794663282e-11
+            },
+            "spearman": {
+              "correlation": -0.47764648247335884,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3280406013072963,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06759909173581609,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Preco_Medio",
+          {
+            "pearson": {
+              "correlation": 0.06585811201489422,
+              "p_value": 4.335166849704678e-11
+            },
+            "spearman": {
+              "correlation": 0.5032710967640364,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.35866299728551143,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06585811201489422,
+            "significant": "True"
+          }
+        ],
+        [
+          "Km_vs_Cluster",
+          {
+            "pearson": {
+              "correlation": -0.06420470475314159,
+              "p_value": 1.307484527705828e-10
+            },
+            "spearman": {
+              "correlation": -0.38287319129810093,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.2605323580886972,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06420470475314159,
+            "significant": "True"
+          }
+        ],
+        [
+          "Is_Premium_Brand",
+          {
+            "pearson": {
+              "correlation": 0.0588899521915861,
+              "p_value": 3.783889562602888e-09
+            },
+            "spearman": {
+              "correlation": 0.5505726310218032,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.44965196635598687,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.0588899521915861,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Posicionamento_Premium",
+          {
+            "pearson": {
+              "correlation": 0.05454884869063306,
+              "p_value": 4.808045278245059e-08
+            },
+            "spearman": {
+              "correlation": 0.4522608962875876,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3693608978423439,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05454884869063306,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Muito_Alta",
+          {
+            "pearson": {
+              "correlation": -0.05391732842756879,
+              "p_value": 6.852999882193955e-08
+            },
+            "spearman": {
+              "correlation": -0.3835549091102774,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3132488056423172,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05391732842756879,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster",
+          {
+            "pearson": {
+              "correlation": 0.05255325117247542,
+              "p_value": 1.4539179112710054e-07
+            },
+            "spearman": {
+              "correlation": 0.4806441846990233,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.38044065013876005,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05255325117247542,
+            "significant": "True"
+          }
+        ],
+        [
+          "Idade_Veiculo",
+          {
+            "pearson": {
+              "correlation": -0.05063772590370748,
+              "p_value": 4.054312284594082e-07
+            },
+            "spearman": {
+              "correlation": -0.4577932584885457,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.31923569901215115,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05063772590370748,
+            "significant": "True"
+          }
+        ],
+        [
+          "Ano",
+          {
+            "pearson": {
+              "correlation": 0.050637725903707465,
+              "p_value": 4.054312284594082e-07
+            },
+            "spearman": {
+              "correlation": 0.4577932584885457,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.31923569901215115,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.050637725903707465,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Baixa",
+          {
+            "pearson": {
+              "correlation": 0.04653592156706794,
+              "p_value": 3.231443704188779e-06
+            },
+            "spearman": {
+              "correlation": 0.31503986888914576,
+              "p_value": 2.9490135500551653e-229
+            },
+            "kendall": {
+              "correlation": 0.25729265957814546,
+              "p_value": 8.050384043366764e-218
+            },
+            "abs_pearson": 0.04653592156706794,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_x_Idade",
+          {
+            "pearson": {
+              "correlation": 0.04609275741831096,
+              "p_value": 4.0044698808502885e-06
+            },
+            "spearman": {
+              "correlation": 0.5688889832442654,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3985406126740902,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04609275741831096,
+            "significant": "True"
+          }
+        ],
+        [
+          "Depreciacao_Estimada",
+          {
+            "pearson": {
+              "correlation": 0.04594285946246434,
+              "p_value": 4.303927482297412e-06
+            },
+            "spearman": {
+              "correlation": 0.4575838090808656,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3190869822922789,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04594285946246434,
+            "significant": "True"
+          }
+        ],
+        [
+          "Modelo_Raridade",
+          {
+            "pearson": {
+              "correlation": 0.04555018054431863,
+              "p_value": 5.193544102707473e-06
+            },
+            "spearman": {
+              "correlation": 0.39623143583677184,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.2750954344282902,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04555018054431863,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Nome_Médio Seminovo",
+          {
+            "pearson": {
+              "correlation": 0.04291378088106017,
+              "p_value": 1.7641872337674056e-05
+            },
+            "spearman": {
+              "correlation": 0.39433819914801255,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3220555048788118,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04291378088106017,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Size",
+          {
+            "pearson": {
+              "correlation": -0.04083755504083522,
+              "p_value": 4.408650401444555e-05
+            },
+            "spearman": {
+              "correlation": -0.26174588801543386,
+              "p_value": 2.530403941454342e-156
+            },
+            "kendall": {
+              "correlation": -0.1945966794623891,
+              "p_value": 2.888335324266163e-139
+            },
+            "abs_pearson": 0.04083755504083522,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Media",
+          {
+            "pearson": {
+              "correlation": 0.03586680988382845,
+              "p_value": 0.0003340086632685057
+            },
+            "spearman": {
+              "correlation": 0.2386809396623027,
+              "p_value": 1.5125221311372435e-129
+            },
+            "kendall": {
+              "correlation": 0.1949304193556961,
+              "p_value": 6.76132850828759e-126
+            },
+            "abs_pearson": 0.03586680988382845,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Percentage",
+          {
+            "pearson": {
+              "correlation": -0.03549851489473049,
+              "p_value": 0.0003844611397751389
+            },
+            "spearman": {
+              "correlation": -0.26174588801543386,
+              "p_value": 2.530403941454342e-156
+            },
+            "kendall": {
+              "correlation": -0.1945966794623891,
+              "p_value": 2.888335324266163e-139
+            },
+            "abs_pearson": 0.03549851489473049,
+            "significant": "True"
+          }
+        ]
+      ],
+      "strong_correlations": [],
+      "significant_correlations": [
+        [
+          "Modelo",
+          {
+            "pearson": {
+              "correlation": 0.08518300981260521,
+              "p_value": 1.4291193120415068e-17
+            },
+            "spearman": {
+              "correlation": 0.44701674187687995,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3089932377021446,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.08518300981260521,
+            "significant": "True"
+          }
+        ],
+        [
+          "Idade_x_Km",
+          {
+            "pearson": {
+              "correlation": -0.08296746852225673,
+              "p_value": 9.567031434755724e-17
+            },
+            "spearman": {
+              "correlation": -0.6523276927730093,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.4748024457080833,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.08296746852225673,
+            "significant": "True"
+          }
+        ],
+        [
+          "Quilometragem",
+          {
+            "pearson": {
+              "correlation": -0.07825755859680168,
+              "p_value": 4.621813798739961e-15
+            },
+            "spearman": {
+              "correlation": -0.5185053742770392,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3591878841140327,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.07825755859680168,
+            "significant": "True"
+          }
+        ],
+        [
+          "Km_por_Porta",
+          {
+            "pearson": {
+              "correlation": -0.06759909173581609,
+              "p_value": 1.3165733794663282e-11
+            },
+            "spearman": {
+              "correlation": -0.47764648247335884,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3280406013072963,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06759909173581609,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Preco_Medio",
+          {
+            "pearson": {
+              "correlation": 0.06585811201489422,
+              "p_value": 4.335166849704678e-11
+            },
+            "spearman": {
+              "correlation": 0.5032710967640364,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.35866299728551143,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06585811201489422,
+            "significant": "True"
+          }
+        ],
+        [
+          "Km_vs_Cluster",
+          {
+            "pearson": {
+              "correlation": -0.06420470475314159,
+              "p_value": 1.307484527705828e-10
+            },
+            "spearman": {
+              "correlation": -0.38287319129810093,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.2605323580886972,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.06420470475314159,
+            "significant": "True"
+          }
+        ],
+        [
+          "Is_Premium_Brand",
+          {
+            "pearson": {
+              "correlation": 0.0588899521915861,
+              "p_value": 3.783889562602888e-09
+            },
+            "spearman": {
+              "correlation": 0.5505726310218032,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.44965196635598687,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.0588899521915861,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Posicionamento_Premium",
+          {
+            "pearson": {
+              "correlation": 0.05454884869063306,
+              "p_value": 4.808045278245059e-08
+            },
+            "spearman": {
+              "correlation": 0.4522608962875876,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3693608978423439,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05454884869063306,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Muito_Alta",
+          {
+            "pearson": {
+              "correlation": -0.05391732842756879,
+              "p_value": 6.852999882193955e-08
+            },
+            "spearman": {
+              "correlation": -0.3835549091102774,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.3132488056423172,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05391732842756879,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster",
+          {
+            "pearson": {
+              "correlation": 0.05255325117247542,
+              "p_value": 1.4539179112710054e-07
+            },
+            "spearman": {
+              "correlation": 0.4806441846990233,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.38044065013876005,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05255325117247542,
+            "significant": "True"
+          }
+        ],
+        [
+          "Idade_Veiculo",
+          {
+            "pearson": {
+              "correlation": -0.05063772590370748,
+              "p_value": 4.054312284594082e-07
+            },
+            "spearman": {
+              "correlation": -0.4577932584885457,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": -0.31923569901215115,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.05063772590370748,
+            "significant": "True"
+          }
+        ],
+        [
+          "Ano",
+          {
+            "pearson": {
+              "correlation": 0.050637725903707465,
+              "p_value": 4.054312284594082e-07
+            },
+            "spearman": {
+              "correlation": 0.4577932584885457,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.31923569901215115,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.050637725903707465,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Baixa",
+          {
+            "pearson": {
+              "correlation": 0.04653592156706794,
+              "p_value": 3.231443704188779e-06
+            },
+            "spearman": {
+              "correlation": 0.31503986888914576,
+              "p_value": 2.9490135500551653e-229
+            },
+            "kendall": {
+              "correlation": 0.25729265957814546,
+              "p_value": 8.050384043366764e-218
+            },
+            "abs_pearson": 0.04653592156706794,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_x_Idade",
+          {
+            "pearson": {
+              "correlation": 0.04609275741831096,
+              "p_value": 4.0044698808502885e-06
+            },
+            "spearman": {
+              "correlation": 0.5688889832442654,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3985406126740902,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04609275741831096,
+            "significant": "True"
+          }
+        ],
+        [
+          "Depreciacao_Estimada",
+          {
+            "pearson": {
+              "correlation": 0.04594285946246434,
+              "p_value": 4.303927482297412e-06
+            },
+            "spearman": {
+              "correlation": 0.4575838090808656,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3190869822922789,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04594285946246434,
+            "significant": "True"
+          }
+        ],
+        [
+          "Modelo_Raridade",
+          {
+            "pearson": {
+              "correlation": 0.04555018054431863,
+              "p_value": 5.193544102707473e-06
+            },
+            "spearman": {
+              "correlation": 0.39623143583677184,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.2750954344282902,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04555018054431863,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Nome_Médio Seminovo",
+          {
+            "pearson": {
+              "correlation": 0.04291378088106017,
+              "p_value": 1.7641872337674056e-05
+            },
+            "spearman": {
+              "correlation": 0.39433819914801255,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.3220555048788118,
+              "p_value": 0.0
+            },
+            "abs_pearson": 0.04291378088106017,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Size",
+          {
+            "pearson": {
+              "correlation": -0.04083755504083522,
+              "p_value": 4.408650401444555e-05
+            },
+            "spearman": {
+              "correlation": -0.26174588801543386,
+              "p_value": 2.530403941454342e-156
+            },
+            "kendall": {
+              "correlation": -0.1945966794623891,
+              "p_value": 2.888335324266163e-139
+            },
+            "abs_pearson": 0.04083755504083522,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Km_Media",
+          {
+            "pearson": {
+              "correlation": 0.03586680988382845,
+              "p_value": 0.0003340086632685057
+            },
+            "spearman": {
+              "correlation": 0.2386809396623027,
+              "p_value": 1.5125221311372435e-129
+            },
+            "kendall": {
+              "correlation": 0.1949304193556961,
+              "p_value": 6.76132850828759e-126
+            },
+            "abs_pearson": 0.03586680988382845,
+            "significant": "True"
+          }
+        ],
+        [
+          "Cluster_Percentage",
+          {
+            "pearson": {
+              "correlation": -0.03549851489473049,
+              "p_value": 0.0003844611397751389
+            },
+            "spearman": {
+              "correlation": -0.26174588801543386,
+              "p_value": 2.530403941454342e-156
+            },
+            "kendall": {
+              "correlation": -0.1945966794623891,
+              "p_value": 2.888335324266163e-139
+            },
+            "abs_pearson": 0.03549851489473049,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Elasticidade",
+          {
+            "pearson": {
+              "correlation": 0.030144785976223696,
+              "p_value": 0.0025715991499802833
+            },
+            "spearman": {
+              "correlation": 0.3861737069563108,
+              "p_value": 0.0
+            },
+            "kendall": {
+              "correlation": 0.2630785893614195,
+              "p_value": 1.358443160793235e-309
+            },
+            "abs_pearson": 0.030144785976223696,
+            "significant": "True"
+          }
+        ],
+        [
+          "Sweet_Spot",
+          {
+            "pearson": {
+              "correlation": 0.027260155312517055,
+              "p_value": 0.006407178630927887
+            },
+            "spearman": {
+              "correlation": 0.23368926945852164,
+              "p_value": 4.077986930446051e-124
+            },
+            "kendall": {
+              "correlation": 0.19085372865938388,
+              "p_value": 9.09528993731909e-121
+            },
+            "abs_pearson": 0.027260155312517055,
+            "significant": "True"
+          }
+        ],
+        [
+          "Idade_vs_Cluster",
+          {
+            "pearson": {
+              "correlation": -0.026979580062663888,
+              "p_value": 0.00697340089330498
+            },
+            "spearman": {
+              "correlation": -0.24252177841385675,
+              "p_value": 8.197055752971142e-134
+            },
+            "kendall": {
+              "correlation": -0.16425748886851135,
+              "p_value": 4.82224084042704e-130
+            },
+            "abs_pearson": 0.026979580062663888,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Volume",
+          {
+            "pearson": {
+              "correlation": -0.024358426003840666,
+              "p_value": 0.014854811362713834
+            },
+            "spearman": {
+              "correlation": -0.22004406568697277,
+              "p_value": 6.428151514423444e-110
+            },
+            "kendall": {
+              "correlation": -0.1489437102277351,
+              "p_value": 1.2794185455746e-100
+            },
+            "abs_pearson": 0.024358426003840666,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Idade_Novo",
+          {
+            "pearson": {
+              "correlation": 0.022132181890346613,
+              "p_value": 0.02688299263401605
+            },
+            "spearman": {
+              "correlation": 0.21276591218673083,
+              "p_value": 9.945845522248765e-103
+            },
+            "kendall": {
+              "correlation": 0.17376564943072897,
+              "p_value": 1.913494319076476e-100
+            },
+            "abs_pearson": 0.022132181890346613,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Idade_Seminovo",
+          {
+            "pearson": {
+              "correlation": 0.021169719840955836,
+              "p_value": 0.03426455314874383
+            },
+            "spearman": {
+              "correlation": 0.21271315849778813,
+              "p_value": 1.1188945237862764e-102
+            },
+            "kendall": {
+              "correlation": 0.1737225655601748,
+              "p_value": 2.1412605037487035e-100
+            },
+            "abs_pearson": 0.021169719840955836,
+            "significant": "True"
+          }
+        ],
+        [
+          "Is_Novo",
+          {
+            "pearson": {
+              "correlation": 0.020619161114068273,
+              "p_value": 0.03921939657184194
+            },
+            "spearman": {
+              "correlation": 0.26184686376994665,
+              "p_value": 1.90455661093769e-156
+            },
+            "kendall": {
+              "correlation": 0.21385000006228447,
+              "p_value": 4.109745646410386e-151
+            },
+            "abs_pearson": 0.020619161114068273,
+            "significant": "True"
+          }
+        ],
+        [
+          "Outlier_Score",
+          {
+            "pearson": {
+              "correlation": -0.019442554010681866,
+              "p_value": 0.0518718067406606
+            },
+            "spearman": {
+              "correlation": -0.23368549546662176,
+              "p_value": 4.116266151564875e-124
+            },
+            "kendall": {
+              "correlation": -0.15601105894200118,
+              "p_value": 5.04226347834371e-121
+            },
+            "abs_pearson": 0.019442554010681866,
+            "significant": "True"
+          }
+        ],
+        [
+          "Faixa_Idade_Usado",
+          {
+            "pearson": {
+              "correlation": 0.01837539029787124,
+              "p_value": 0.06614136020671517
+            },
+            "spearman": {
+              "correlation": 0.16388449110815742,
+              "p_value": 3.78879143690857e-61
+            },
+            "kendall": {
+              "correlation": 0.13384425510812398,
+              "p_value": 2.344084223873799e-60
+            },
+            "abs_pearson": 0.01837539029787124,
+            "significant": "True"
+          }
+        ],
+        [
+          "Is_Outlier",
+          {
+            "pearson": {
+              "correlation": 0.015103864046213184,
+              "p_value": 0.13097103995231363
+            },
+            "spearman": {
+              "correlation": 0.12949466165150414,
+              "p_value": 1.1821212263248e-38
+            },
+            "kendall": {
+              "correlation": 0.10575812520164334,
+              "p_value": 2.385974071841863e-38
+            },
+            "abs_pearson": 0.015103864046213184,
+            "significant": "True"
+          }
+        ],
+        [
+          "Outlier_Methods",
+          {
+            "pearson": {
+              "correlation": 0.015103864046213184,
+              "p_value": 0.13097103995231363
+            },
+            "spearman": {
+              "correlation": 0.12949466165150414,
+              "p_value": 1.1821212263248e-38
+            },
+            "kendall": {
+              "correlation": 0.10575812520164334,
+              "p_value": 2.385974071841863e-38
+            },
+            "abs_pearson": 0.015103864046213184,
+            "significant": "True"
+          }
+        ],
+        [
+          "Distancia_Centroide",
+          {
+            "pearson": {
+              "correlation": 0.013225389346430349,
+              "p_value": 0.18602452594185928
+            },
+            "spearman": {
+              "correlation": 0.044878272735580184,
+              "p_value": 7.138111256029993e-06
+            },
+            "kendall": {
+              "correlation": 0.03159661367602627,
+              "p_value": 2.161395125202104e-06
+            },
+            "abs_pearson": 0.013225389346430349,
+            "significant": "True"
+          }
+        ],
+        [
+          "Eficiencia_Km",
+          {
+            "pearson": {
+              "correlation": -0.011071526188873587,
+              "p_value": 0.2682731139704619
+            },
+            "spearman": {
+              "correlation": -0.09723354246016892,
+              "p_value": 1.933281082189108e-22
+            },
+            "kendall": {
+              "correlation": -0.06351876760813342,
+              "p_value": 1.6918551559026614e-21
+            },
+            "abs_pearson": 0.011071526188873587,
+            "significant": "True"
+          }
+        ],
+        [
+          "Intensidade_Uso",
+          {
+            "pearson": {
+              "correlation": -0.011071526188873587,
+              "p_value": 0.2682731139704619
+            },
+            "spearman": {
+              "correlation": -0.09723354246016892,
+              "p_value": 1.933281082189108e-22
+            },
+            "kendall": {
+              "correlation": -0.06351876760813342,
+              "p_value": 1.6918551559026614e-21
+            },
+            "abs_pearson": 0.011071526188873587,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca",
+          {
+            "pearson": {
+              "correlation": 0.005981301131724078,
+              "p_value": 0.5497994373563012
+            },
+            "spearman": {
+              "correlation": 0.10268098159430901,
+              "p_value": 7.49696463562543e-25
+            },
+            "kendall": {
+              "correlation": 0.07435030311668213,
+              "p_value": 2.1652916191980367e-26
+            },
+            "abs_pearson": 0.005981301131724078,
+            "significant": "True"
+          }
+        ],
+        [
+          "Marca_Posicionamento_Intermediária",
+          {
+            "pearson": {
+              "correlation": -0.0014226854419169665,
+              "p_value": 0.8868818821905294
+            },
+            "spearman": {
+              "correlation": -0.0965438808359677,
+              "p_value": 3.8213130132639332e-22
+            },
+            "kendall": {
+              "correlation": -0.07884726448709332,
+              "p_value": 4.731856802733923e-22
+            },
+            "abs_pearson": 0.0014226854419169665,
+            "significant": "True"
+          }
+        ]
+      ]
+    },
+    "mutual_information": {
+      "mi_scores": [
+        {
+          "feature": "Idade_x_Km",
+          "mutual_info": 0.4448240265516139
+        },
+        {
+          "feature": "Marca_x_Idade",
+          "mutual_info": 0.42461192181126606
+        },
+        {
+          "feature": "Marca",
+          "mutual_info": 0.29494238616648083
+        },
+        {
+          "feature": "Marca_Elasticidade",
+          "mutual_info": 0.29487671376874935
+        },
+        {
+          "feature": "Marca_Volume",
+          "mutual_info": 0.29457935417583103
+        },
+        {
+          "feature": "Marca_Preco_Medio",
+          "mutual_info": 0.2940967673378765
+        },
+        {
+          "feature": "Modelo",
+          "mutual_info": 0.29049194949634227
+        },
+        {
+          "feature": "Idade_vs_Cluster",
+          "mutual_info": 0.25935736899619855
+        },
+        {
+          "feature": "Modelo_Raridade",
+          "mutual_info": 0.254400711174501
+        },
+        {
+          "feature": "Idade_Veiculo_ZScore_Cluster",
+          "mutual_info": 0.2507580566315797
+        },
+        {
+          "feature": "Quilometragem",
+          "mutual_info": 0.2055130641727141
+        },
+        {
+          "feature": "Is_Premium_Brand",
+          "mutual_info": 0.19754921541933546
+        },
+        {
+          "feature": "Cluster_Size",
+          "mutual_info": 0.19514838733424167
+        },
+        {
+          "feature": "Cluster",
+          "mutual_info": 0.19470336304677915
+        },
+        {
+          "feature": "Cluster_Percentage",
+          "mutual_info": 0.19400447157398193
+        },
+        {
+          "feature": "Km_vs_Cluster",
+          "mutual_info": 0.1915613760341497
+        },
+        {
+          "feature": "Km_por_Porta",
+          "mutual_info": 0.17153431967129062
+        },
+        {
+          "feature": "Idade_Veiculo",
+          "mutual_info": 0.14606349608708058
+        },
+        {
+          "feature": "Depreciacao_Estimada",
+          "mutual_info": 0.14494517633080717
+        },
+        {
+          "feature": "Ano",
+          "mutual_info": 0.14463991071300786
+        },
+        {
+          "feature": "Marca_Posicionamento_Premium",
+          "mutual_info": 0.12179366879313802
+        },
+        {
+          "feature": "Intensidade_Uso",
+          "mutual_info": 0.10957922853334168
+        },
+        {
+          "feature": "Eficiencia_Km",
+          "mutual_info": 0.10923907204575656
+        },
+        {
+          "feature": "Cluster_Nome_Médio Seminovo",
+          "mutual_info": 0.10656928072427974
+        },
+        {
+          "feature": "Faixa_Km_Muito_Alta",
+          "mutual_info": 0.09480222686199924
+        },
+        {
+          "feature": "Distancia_Centroide",
+          "mutual_info": 0.07280318926331297
+        },
+        {
+          "feature": "Outlier_Score",
+          "mutual_info": 0.06749108251304747
+        },
+        {
+          "feature": "Faixa_Km_Baixa",
+          "mutual_info": 0.06707087586907967
+        },
+        {
+          "feature": "Is_Novo",
+          "mutual_info": 0.049104878322737244
+        },
+        {
+          "feature": "Faixa_Km_Media",
+          "mutual_info": 0.046412515491426776
+        },
+        {
+          "feature": "Sweet_Spot",
+          "mutual_info": 0.04203867722954624
+        },
+        {
+          "feature": "Quilometragem_ZScore_Cluster",
+          "mutual_info": 0.03923515407771028
+        },
+        {
+          "feature": "Faixa_Idade_Novo",
+          "mutual_info": 0.03306827675173474
+        },
+        {
+          "feature": "Faixa_Idade_Seminovo",
+          "mutual_info": 0.03079188378473563
+        },
+        {
+          "feature": "Faixa_Idade_Usado",
+          "mutual_info": 0.02873991824891875
+        },
+        {
+          "feature": "Outlier_Methods",
+          "mutual_info": 0.014371273585920719
+        },
+        {
+          "feature": "Is_Outlier",
+          "mutual_info": 0.014208582885522958
+        },
+        {
+          "feature": "Marca_Posicionamento_Intermediária",
+          "mutual_info": 0.014115668968128547
+        }
+      ],
+      "high_mi_features": [
+        {
+          "feature": "Idade_x_Km",
+          "mutual_info": 0.4448240265516139
+        },
+        {
+          "feature": "Marca_x_Idade",
+          "mutual_info": 0.42461192181126606
+        },
+        {
+          "feature": "Marca",
+          "mutual_info": 0.29494238616648083
+        },
+        {
+          "feature": "Marca_Elasticidade",
+          "mutual_info": 0.29487671376874935
+        },
+        {
+          "feature": "Marca_Volume",
+          "mutual_info": 0.29457935417583103
+        },
+        {
+          "feature": "Marca_Preco_Medio",
+          "mutual_info": 0.2940967673378765
+        },
+        {
+          "feature": "Modelo",
+          "mutual_info": 0.29049194949634227
+        },
+        {
+          "feature": "Idade_vs_Cluster",
+          "mutual_info": 0.25935736899619855
+        },
+        {
+          "feature": "Modelo_Raridade",
+          "mutual_info": 0.254400711174501
+        },
+        {
+          "feature": "Idade_Veiculo_ZScore_Cluster",
+          "mutual_info": 0.2507580566315797
+        },
+        {
+          "feature": "Quilometragem",
+          "mutual_info": 0.2055130641727141
+        },
+        {
+          "feature": "Is_Premium_Brand",
+          "mutual_info": 0.19754921541933546
+        },
+        {
+          "feature": "Cluster_Size",
+          "mutual_info": 0.19514838733424167
+        },
+        {
+          "feature": "Cluster",
+          "mutual_info": 0.19470336304677915
+        },
+        {
+          "feature": "Cluster_Percentage",
+          "mutual_info": 0.19400447157398193
+        },
+        {
+          "feature": "Km_vs_Cluster",
+          "mutual_info": 0.1915613760341497
+        },
+        {
+          "feature": "Km_por_Porta",
+          "mutual_info": 0.17153431967129062
+        },
+        {
+          "feature": "Idade_Veiculo",
+          "mutual_info": 0.14606349608708058
+        },
+        {
+          "feature": "Depreciacao_Estimada",
+          "mutual_info": 0.14494517633080717
+        },
+        {
+          "feature": "Ano",
+          "mutual_info": 0.14463991071300786
+        },
+        {
+          "feature": "Marca_Posicionamento_Premium",
+          "mutual_info": 0.12179366879313802
+        },
+        {
+          "feature": "Intensidade_Uso",
+          "mutual_info": 0.10957922853334168
+        },
+        {
+          "feature": "Eficiencia_Km",
+          "mutual_info": 0.10923907204575656
+        },
+        {
+          "feature": "Cluster_Nome_Médio Seminovo",
+          "mutual_info": 0.10656928072427974
+        }
+      ],
+      "mi_mean": 0.15657993395905692,
+      "mi_std": 0.11263205119823212
+    },
+    "statistical_tests": {
+      "Marca": {
+        "normality_test": {
+          "shapiro_stat": 0.9343671781767843,
+          "shapiro_p": 2.1775829148725557e-42,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 0.35770087745060686,
+          "f_p": 0.549799437355843,
+          "significant": "False"
+        }
+      },
+      "Modelo": {
+        "normality_test": {
+          "shapiro_stat": 0.9742760811059089,
+          "shapiro_p": 4.1805868487002794e-29,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 73.07719807418832,
+          "f_p": 1.4291193120439005e-17,
+          "significant": "True"
+        }
+      },
+      "Ano": {
+        "normality_test": {
+          "shapiro_stat": 0.9522292876548838,
+          "shapiro_p": 1.364851942757917e-37,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 25.70257048722796,
+          "f_p": 4.0543122845973534e-07,
+          "significant": "True"
+        }
+      },
+      "Quilometragem": {
+        "normality_test": {
+          "shapiro_stat": 0.9590644686026565,
+          "shapiro_p": 2.283439704487763e-35,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 61.607505772975614,
+          "f_p": 4.6218137987453484e-15,
+          "significant": "True"
+        }
+      },
+      "Idade_Veiculo": {
+        "normality_test": {
+          "shapiro_stat": 0.9514469494315972,
+          "shapiro_p": 7.889598783170179e-38,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 25.702570487228037,
+          "f_p": 4.0543122845973534e-07,
+          "significant": "True"
+        }
+      },
+      "Eficiencia_Km": {
+        "normality_test": {
+          "shapiro_stat": 0.6744414853041009,
+          "shapiro_p": 3.802496676809958e-71,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 1.2256920078481357,
+          "f_p": 0.2682731139706626,
+          "significant": "False"
+        }
+      },
+      "Depreciacao_Estimada": {
+        "normality_test": {
+          "shapiro_stat": 0.8942486087725324,
+          "shapiro_p": 3.721016867283903e-50,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 21.14787967273117,
+          "f_p": 4.303927482299681e-06,
+          "significant": "True"
+        }
+      },
+      "Marca_Preco_Medio": {
+        "normality_test": {
+          "shapiro_stat": 0.8739481752075786,
+          "shapiro_p": 3.4734545307925213e-53,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 43.553137226378276,
+          "f_p": 4.3351668497071775e-11,
+          "significant": "True"
+        }
+      },
+      "Marca_Elasticidade": {
+        "normality_test": {
+          "shapiro_stat": 0.9167899698742188,
+          "shapiro_p": 3.620291086892782e-46,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 9.093527161265396,
+          "f_p": 0.0025715991499841713,
+          "significant": "True"
+        }
+      },
+      "Marca_Volume": {
+        "normality_test": {
+          "shapiro_stat": 0.9158766474851756,
+          "shapiro_p": 2.4035557388602457e-46,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 5.935664333046423,
+          "f_p": 0.014854811362730012,
+          "significant": "True"
+        }
+      },
+      "Idade_x_Km": {
+        "normality_test": {
+          "shapiro_stat": 0.9047805734733583,
+          "shapiro_p": 2.1725124629666306e-48,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 69.29926963845963,
+          "f_p": 9.567031434774094e-17,
+          "significant": "True"
+        }
+      },
+      "Km_por_Porta": {
+        "normality_test": {
+          "shapiro_stat": 0.9612975547162868,
+          "shapiro_p": 1.408640703828657e-34,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 45.896965240557066,
+          "f_p": 1.3165733794674838e-11,
+          "significant": "True"
+        }
+      },
+      "Marca_x_Idade": {
+        "normality_test": {
+          "shapiro_stat": 0.6982171311118066,
+          "shapiro_p": 1.3006712879986275e-69,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 21.286397631553612,
+          "f_p": 4.004469880854957e-06,
+          "significant": "True"
+        }
+      },
+      "Intensidade_Uso": {
+        "normality_test": {
+          "shapiro_stat": 0.6765533958991791,
+          "shapiro_p": 5.157019983432331e-71,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 1.225692007848135,
+          "f_p": 0.2682731139706626,
+          "significant": "False"
+        }
+      },
+      "Sweet_Spot": {
+        "normality_test": {
+          "shapiro_stat": 0.2778553779620603,
+          "shapiro_p": 2.674979195957683e-88,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 7.435199660824065,
+          "f_p": 0.006407178630939439,
+          "significant": "True"
+        }
+      },
+      "Modelo_Raridade": {
+        "normality_test": {
+          "shapiro_stat": 0.869429421801197,
+          "shapiro_p": 8.355959318100869e-54,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 20.787169451350156,
+          "f_p": 5.193544102712608e-06,
+          "significant": "True"
+        }
+      },
+      "Is_Premium_Brand": {
+        "normality_test": {
+          "shapiro_stat": 0.6214411482897263,
+          "shapiro_p": 3.0053988282342756e-74,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 34.793995134427895,
+          "f_p": 3.7838895626058526e-09,
+          "significant": "True"
+        }
+      },
+      "Is_Novo": {
+        "normality_test": {
+          "shapiro_stat": 0.384712590672723,
+          "shapiro_p": 1.0642789019175025e-84,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 4.252455681572677,
+          "f_p": 0.0392193965718741,
+          "significant": "True"
+        }
+      },
+      "Cluster": {
+        "normality_test": {
+          "shapiro_stat": 0.737284135213566,
+          "shapiro_p": 7.488255390300373e-67,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 27.689392187013254,
+          "f_p": 1.4539179112710933e-07,
+          "significant": "True"
+        }
+      },
+      "Distancia_Centroide": {
+        "normality_test": {
+          "shapiro_stat": 0.8728279825489476,
+          "shapiro_p": 2.430380781036685e-53,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 1.7490653424340759,
+          "f_p": 0.18602452594199764,
+          "significant": "False"
+        }
+      },
+      "Idade_vs_Cluster": {
+        "normality_test": {
+          "shapiro_stat": 0.9510591834314315,
+          "shapiro_p": 6.0284666181627e-38,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 7.2828227583254685,
+          "f_p": 0.006973400893316944,
+          "significant": "True"
+        }
+      },
+      "Km_vs_Cluster": {
+        "normality_test": {
+          "shapiro_stat": 0.9899725777266578,
+          "shapiro_p": 2.2722548959647155e-18,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 41.38479486312487,
+          "f_p": 1.3074845277079466e-10,
+          "significant": "True"
+        }
+      },
+      "Cluster_Size": {
+        "normality_test": {
+          "shapiro_stat": 0.6618845460979151,
+          "shapiro_p": 6.427832061436543e-72,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 16.701576923732304,
+          "f_p": 4.408650401452232e-05,
+          "significant": "True"
+        }
+      },
+      "Cluster_Percentage": {
+        "normality_test": {
+          "shapiro_stat": 0.7084654867050013,
+          "shapiro_p": 6.418058055677939e-69,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 12.614821807267022,
+          "f_p": 0.0003844611397757578,
+          "significant": "True"
+        }
+      },
+      "Idade_Veiculo_ZScore_Cluster": {
+        "normality_test": {
+          "shapiro_stat": 0.9228806851727396,
+          "shapiro_p": 6.132234542073243e-45,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 0.08001158590410325,
+          "f_p": 0.7772875664250793,
+          "significant": "False"
+        }
+      },
+      "Quilometragem_ZScore_Cluster": {
+        "normality_test": {
+          "shapiro_stat": 0.9574821985788553,
+          "shapiro_p": 6.59260621892929e-36,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 0.22249832320966864,
+          "f_p": 0.6371531728120945,
+          "significant": "False"
+        }
+      },
+      "Is_Outlier": {
+        "normality_test": {
+          "shapiro_stat": 0.2279261652338993,
+          "shapiro_p": 7.977113250087377e-90,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 2.2813312704418993,
+          "f_p": 0.13097103995244852,
+          "significant": "False"
+        }
+      },
+      "Outlier_Methods": {
+        "normality_test": {
+          "shapiro_stat": 0.22620491915861463,
+          "shapiro_p": 7.092568472834869e-90,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 2.2813312704418993,
+          "f_p": 0.13097103995244852,
+          "significant": "False"
+        }
+      },
+      "Outlier_Score": {
+        "normality_test": {
+          "shapiro_stat": 0.9853038973864551,
+          "shapiro_p": 2.0768084493245864e-22,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 3.780802230809915,
+          "f_p": 0.05187180674075761,
+          "significant": "False"
+        }
+      },
+      "Marca_Posicionamento_Intermediária": {
+        "normality_test": {
+          "shapiro_stat": 0.5733325298642356,
+          "shapiro_p": 9.313782063172936e-77,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 0.020236331557712598,
+          "f_p": 0.8868818821879108,
+          "significant": "False"
+        }
+      },
+      "Marca_Posicionamento_Premium": {
+        "normality_test": {
+          "shapiro_stat": 0.571485856199806,
+          "shapiro_p": 7.546762615319917e-77,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 29.83860484405748,
+          "f_p": 4.808045278251352e-08,
+          "significant": "True"
+        }
+      },
+      "Faixa_Idade_Novo": {
+        "normality_test": {
+          "shapiro_stat": 0.31431737620420297,
+          "shapiro_p": 3.984297348324257e-87,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 4.899755149416087,
+          "f_p": 0.02688299263403717,
+          "significant": "True"
+        }
+      },
+      "Faixa_Idade_Seminovo": {
+        "normality_test": {
+          "shapiro_stat": 0.3775257408837067,
+          "shapiro_p": 5.869224143877683e-85,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 4.482683013311333,
+          "f_p": 0.0342645531487967,
+          "significant": "True"
+        }
+      },
+      "Faixa_Idade_Usado": {
+        "normality_test": {
+          "shapiro_stat": 0.5008561725879805,
+          "shapiro_p": 4.115296702088052e-80,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 3.377014641826815,
+          "f_p": 0.06614136020677368,
+          "significant": "False"
+        }
+      },
+      "Faixa_Km_Baixa": {
+        "normality_test": {
+          "shapiro_stat": 0.42865918716036555,
+          "shapiro_p": 4.6447802785903255e-83,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 21.698579046079097,
+          "f_p": 3.231443704194208e-06,
+          "significant": "True"
+        }
+      },
+      "Faixa_Km_Media": {
+        "normality_test": {
+          "shapiro_stat": 0.5298236639311924,
+          "shapiro_p": 7.969939145577205e-79,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 12.87827463005949,
+          "f_p": 0.0003340086632689707,
+          "significant": "True"
+        }
+      },
+      "Faixa_Km_Muito_Alta": {
+        "normality_test": {
+          "shapiro_stat": 0.528381970189594,
+          "shapiro_p": 6.851812656823584e-79,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 29.14970937877833,
+          "f_p": 6.852999882205719e-08,
+          "significant": "True"
+        }
+      },
+      "Cluster_Nome_Médio Seminovo": {
+        "normality_test": {
+          "shapiro_stat": 0.6364483851628295,
+          "shapiro_p": 2.0725906276955433e-73,
+          "is_normal": "False"
+        },
+        "f_regression": {
+          "f_stat": 18.446213119282415,
+          "f_p": 1.7641872337693393e-05,
+          "significant": "True"
+        }
+      }
+    },
+    "feature_stability": {
+      "Marca": {
+        "cv_mean": -0.0006449658518192347,
+        "cv_std": 0.0008603508901822743,
+        "cv_min": -0.0018408352171375153,
+        "cv_max": 0.0002978278434241366,
+        "stability_score": -0.3339272900769037
+      },
+      "Modelo": {
+        "cv_mean": 0.005200091826342712,
+        "cv_std": 0.006610853307338223,
+        "cv_min": -0.005625671352110562,
+        "cv_max": 0.01506278344191414,
+        "stability_score": -0.27129304927240416
+      },
+      "Ano": {
+        "cv_mean": 0.0037542160907276132,
+        "cv_std": 0.0022327494876530933,
+        "cv_min": -0.0002992176076597186,
+        "cv_max": 0.006083383559551181,
+        "stability_score": 0.4052703716572488
+      },
+      "Quilometragem": {
+        "cv_mean": 0.006330468713469184,
+        "cv_std": 0.0082111999723682,
+        "cv_min": -0.006938395047787704,
+        "cv_max": 0.0170004290763065,
+        "stability_score": -0.297089895413037
+      },
+      "Idade_Veiculo": {
+        "cv_mean": 0.0037542160907276132,
+        "cv_std": 0.0022327494876530933,
+        "cv_min": -0.0002992176076597186,
+        "cv_max": 0.006083383559551181,
+        "stability_score": 0.4052703716572488
+      },
+      "Eficiencia_Km": {
+        "cv_mean": -0.0008231198447043564,
+        "cv_std": 0.0013263971910996675,
+        "cv_min": -0.003412480119040495,
+        "cv_max": 0.0002721003765566721,
+        "stability_score": -0.6114069968828184
+      },
+      "Depreciacao_Estimada": {
+        "cv_mean": 0.003088235111001536,
+        "cv_std": 0.001577286993370819,
+        "cv_min": 0.0003324502520601902,
+        "cv_max": 0.0048735272831995635,
+        "stability_score": 0.4892610733027938
+      },
+      "Marca_Preco_Medio": {
+        "cv_mean": 0.0024373827486589895,
+        "cv_std": 0.004005528419124133,
+        "cv_min": -0.0030887645131059127,
+        "cv_max": 0.008829829063852768,
+        "stability_score": -0.6433660194188666
+      },
+      "Marca_Elasticidade": {
+        "cv_mean": 4.228364389267103e-05,
+        "cv_std": 0.0025463369926597406,
+        "cv_min": -0.004159710877887024,
+        "cv_max": 0.003321493490046512,
+        "stability_score": -59.20613875507165
+      },
+      "Marca_Volume": {
+        "cv_mean": -0.0006339464827189722,
+        "cv_std": 0.0010827681041950738,
+        "cv_min": -0.002410074831192377,
+        "cv_max": 0.0005240572661288079,
+        "stability_score": -0.7079533591189036
+      },
+      "Idade_x_Km": {
+        "cv_mean": 0.0085250871445804,
+        "cv_std": 0.008074356931326743,
+        "cv_min": -0.005585871018541688,
+        "cv_max": 0.01798430764634218,
+        "stability_score": 0.052872149795994194
+      },
+      "Km_por_Porta": {
+        "cv_mean": 0.0043839049422932375,
+        "cv_std": 0.0044786923102935255,
+        "cv_min": -0.0006158946776242402,
+        "cv_max": 0.01199322692957816,
+        "stability_score": -0.021619344637811233
+      },
+      "Marca_x_Idade": {
+        "cv_mean": 0.002932280888138705,
+        "cv_std": 0.0016438198475100911,
+        "cv_min": 0.0010750993504354822,
+        "cv_max": 0.00531523697391989,
+        "stability_score": 0.4394076473928824
+      },
+      "Intensidade_Uso": {
+        "cv_mean": -0.0008231198447043564,
+        "cv_std": 0.0013263971910996675,
+        "cv_min": -0.003412480119040495,
+        "cv_max": 0.0002721003765566721,
+        "stability_score": -0.6114069968828184
+      },
+      "Sweet_Spot": {
+        "cv_mean": -0.000511724556004034,
+        "cv_std": 0.001810381527967193,
+        "cv_min": -0.002658837415485671,
+        "cv_max": 0.002297279275378483,
+        "stability_score": -2.537735544192801
+      },
+      "Modelo_Raridade": {
+        "cv_mean": 0.0020209803515198743,
+        "cv_std": 0.0024715854894738374,
+        "cv_min": -0.0024190568430695336,
+        "cv_max": 0.0051258676948222615,
+        "stability_score": -0.2229575898841356
+      },
+      "Is_Premium_Brand": {
+        "cv_mean": 0.002222782569427295,
+        "cv_std": 0.0033736455339357556,
+        "cv_min": -0.0008642202867590321,
+        "cv_max": 0.008423732552622298,
+        "stability_score": -0.517750950015538
+      },
+      "Is_Novo": {
+        "cv_mean": 5.1007666945679377e-05,
+        "cv_std": 0.0019690157813003445,
+        "cv_min": -0.0036300265724118486,
+        "cv_max": 0.002159512095669669,
+        "stability_score": -37.59478292876146
+      },
+      "Cluster": {
+        "cv_mean": 0.004039785176834898,
+        "cv_std": 0.0033512665543975377,
+        "cv_min": -0.0012308485062222374,
+        "cv_max": 0.00879081454167785,
+        "stability_score": 0.1704365177684105
+      },
+      "Distancia_Centroide": {
+        "cv_mean": -0.0009129733466835876,
+        "cv_std": 0.0007727684189091433,
+        "cv_min": -0.0019118453841096006,
+        "cv_max": -2.7186348145136208e-05,
+        "stability_score": 0.15357884487573092
+      }
+    },
+    "redundancy_analysis": {
+      "correlation_matrix_shape": [
+        38,
+        38
+      ],
+      "high_correlation_pairs": [
+        {
+          "feature_1": "Ano",
+          "feature_2": "Idade_Veiculo",
+          "correlation": -1.0
+        },
+        {
+          "feature_1": "Ano",
+          "feature_2": "Depreciacao_Estimada",
+          "correlation": 0.9567741812341857
+        },
+        {
+          "feature_1": "Ano",
+          "feature_2": "Cluster",
+          "correlation": 0.8314257124402121
+        },
+        {
+          "feature_1": "Ano",
+          "feature_2": "Cluster_Size",
+          "correlation": -0.8601554699701294
+        },
+        {
+          "feature_1": "Ano",
+          "feature_2": "Cluster_Percentage",
+          "correlation": -0.8484510634149808
+        },
+        {
+          "feature_1": "Ano",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": 0.8615861642753719
+        },
+        {
+          "feature_1": "Quilometragem",
+          "feature_2": "Km_por_Porta",
+          "correlation": 0.8940976443497164
+        },
+        {
+          "feature_1": "Idade_Veiculo",
+          "feature_2": "Depreciacao_Estimada",
+          "correlation": -0.9567741812341857
+        },
+        {
+          "feature_1": "Idade_Veiculo",
+          "feature_2": "Cluster",
+          "correlation": -0.8314257124402121
+        },
+        {
+          "feature_1": "Idade_Veiculo",
+          "feature_2": "Cluster_Size",
+          "correlation": 0.8601554699701294
+        },
+        {
+          "feature_1": "Idade_Veiculo",
+          "feature_2": "Cluster_Percentage",
+          "correlation": 0.8484510634149806
+        },
+        {
+          "feature_1": "Idade_Veiculo",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": -0.861586164275372
+        },
+        {
+          "feature_1": "Eficiencia_Km",
+          "feature_2": "Intensidade_Uso",
+          "correlation": 1.0
+        },
+        {
+          "feature_1": "Depreciacao_Estimada",
+          "feature_2": "Marca_x_Idade",
+          "correlation": 0.8953480177210226
+        },
+        {
+          "feature_1": "Depreciacao_Estimada",
+          "feature_2": "Cluster_Size",
+          "correlation": -0.8028549170873911
+        },
+        {
+          "feature_1": "Depreciacao_Estimada",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": 0.8044136098467447
+        },
+        {
+          "feature_1": "Marca_Preco_Medio",
+          "feature_2": "Is_Premium_Brand",
+          "correlation": 0.8941943579899119
+        },
+        {
+          "feature_1": "Marca_Preco_Medio",
+          "feature_2": "Marca_Posicionamento_Premium",
+          "correlation": 0.8282783551143483
+        },
+        {
+          "feature_1": "Marca_x_Idade",
+          "feature_2": "Is_Novo",
+          "correlation": 0.8456983783549331
+        },
+        {
+          "feature_1": "Marca_x_Idade",
+          "feature_2": "Faixa_Idade_Novo",
+          "correlation": 0.8271238115787529
+        },
+        {
+          "feature_1": "Cluster",
+          "feature_2": "Cluster_Size",
+          "correlation": -0.9479827662595701
+        },
+        {
+          "feature_1": "Cluster",
+          "feature_2": "Cluster_Percentage",
+          "correlation": -0.9044806401240366
+        },
+        {
+          "feature_1": "Cluster",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": 0.9624081267526162
+        },
+        {
+          "feature_1": "Cluster_Size",
+          "feature_2": "Cluster_Percentage",
+          "correlation": 0.9932009170611446
+        },
+        {
+          "feature_1": "Cluster_Size",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": -0.9988048452958009
+        },
+        {
+          "feature_1": "Cluster_Percentage",
+          "feature_2": "Cluster_Nome_Médio Seminovo",
+          "correlation": -0.9863240756428968
+        },
+        {
+          "feature_1": "Is_Outlier",
+          "feature_2": "Outlier_Methods",
+          "correlation": 1.0
+        }
+      ],
+      "redundant_features": [
+        "Marca_Preco_Medio",
+        "Outlier_Methods",
+        "Cluster_Size",
+        "Cluster_Percentage",
+        "Idade_Veiculo",
+        "Marca_x_Idade",
+        "Cluster_Nome_Médio Seminovo",
+        "Depreciacao_Estimada",
+        "Marca_Posicionamento_Premium",
+        "Cluster",
+        "Intensidade_Uso",
+        "Faixa_Idade_Novo",
+        "Quilometragem"
+      ],
+      "avg_correlation": 0.20340288711128648
+    },
+    "feature_importance": {
+      "rf_importance": [
+        {
+          "feature": "Outlier_Score",
+          "rf_importance": 0.135918068710807
+        },
+        {
+          "feature": "Idade_x_Km",
+          "rf_importance": 0.13342213573231776
+        },
+        {
+          "feature": "Km_por_Porta",
+          "rf_importance": 0.09643849950882619
+        },
+        {
+          "feature": "Distancia_Centroide",
+          "rf_importance": 0.08167000227695183
+        },
+        {
+          "feature": "Quilometragem_ZScore_Cluster",
+          "rf_importance": 0.08138109870917505
+        },
+        {
+          "feature": "Km_vs_Cluster",
+          "rf_importance": 0.07770076920952468
+        },
+        {
+          "feature": "Quilometragem",
+          "rf_importance": 0.07702105466787665
+        },
+        {
+          "feature": "Intensidade_Uso",
+          "rf_importance": 0.0477284440363209
+        },
+        {
+          "feature": "Marca_x_Idade",
+          "rf_importance": 0.04577395898019617
+        },
+        {
+          "feature": "Eficiencia_Km",
+          "rf_importance": 0.04273836992964289
+        },
+        {
+          "feature": "Modelo",
+          "rf_importance": 0.036202040497302766
+        },
+        {
+          "feature": "Modelo_Raridade",
+          "rf_importance": 0.029950428163980466
+        },
+        {
+          "feature": "Idade_Veiculo_ZScore_Cluster",
+          "rf_importance": 0.02125972140562136
+        },
+        {
+          "feature": "Idade_vs_Cluster",
+          "rf_importance": 0.015494628323972331
+        },
+        {
+          "feature": "Marca_Elasticidade",
+          "rf_importance": 0.01296396321424717
+        },
+        {
+          "feature": "Marca_Volume",
+          "rf_importance": 0.011190180331509857
+        },
+        {
+          "feature": "Marca_Preco_Medio",
+          "rf_importance": 0.009161109594129024
+        },
+        {
+          "feature": "Marca",
+          "rf_importance": 0.00890888838038616
+        },
+        {
+          "feature": "Ano",
+          "rf_importance": 0.007567830726693625
+        },
+        {
+          "feature": "Idade_Veiculo",
+          "rf_importance": 0.0064927315149921035
+        },
+        {
+          "feature": "Depreciacao_Estimada",
+          "rf_importance": 0.0062009181296515765
+        },
+        {
+          "feature": "Marca_Posicionamento_Intermediária",
+          "rf_importance": 0.0017571252416078878
+        },
+        {
+          "feature": "Is_Premium_Brand",
+          "rf_importance": 0.0017545322507993627
+        },
+        {
+          "feature": "Faixa_Idade_Seminovo",
+          "rf_importance": 0.0017232588037696108
+        },
+        {
+          "feature": "Faixa_Km_Media",
+          "rf_importance": 0.0016967706973138135
+        },
+        {
+          "feature": "Marca_Posicionamento_Premium",
+          "rf_importance": 0.0010426034966347607
+        },
+        {
+          "feature": "Faixa_Km_Baixa",
+          "rf_importance": 0.0009563979931365381
+        },
+        {
+          "feature": "Faixa_Idade_Usado",
+          "rf_importance": 0.0009494395861446983
+        },
+        {
+          "feature": "Cluster",
+          "rf_importance": 0.000893687445432381
+        },
+        {
+          "feature": "Faixa_Km_Muito_Alta",
+          "rf_importance": 0.0007851181282190442
+        },
+        {
+          "feature": "Outlier_Methods",
+          "rf_importance": 0.0006013450638774928
+        },
+        {
+          "feature": "Cluster_Percentage",
+          "rf_importance": 0.0005889676655156424
+        },
+        {
+          "feature": "Cluster_Size",
+          "rf_importance": 0.00047385200973692554
+        },
+        {
+          "feature": "Is_Outlier",
+          "rf_importance": 0.00046258922312798973
+        },
+        {
+          "feature": "Sweet_Spot",
+          "rf_importance": 0.00037026508082958824
+        },
+        {
+          "feature": "Cluster_Nome_Médio Seminovo",
+          "rf_importance": 0.0003231266856597356
+        },
+        {
+          "feature": "Faixa_Idade_Novo",
+          "rf_importance": 0.00023294176273238245
+        },
+        {
+          "feature": "Is_Novo",
+          "rf_importance": 0.00020313682133684673
+        }
+      ],
+      "rfe_ranking": [
+        {
+          "feature": "Modelo",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Ano",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Quilometragem",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Idade_x_Km",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Idade_vs_Cluster",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Km_vs_Cluster",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Cluster_Size",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Cluster",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Cluster_Percentage",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Cluster_Nome_Médio Seminovo",
+          "rfe_ranking": 1,
+          "rfe_selected": true
+        },
+        {
+          "feature": "Depreciacao_Estimada",
+          "rfe_ranking": 2,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_x_Idade",
+          "rfe_ranking": 3,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Distancia_Centroide",
+          "rfe_ranking": 4,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Km_Muito_Alta",
+          "rfe_ranking": 5,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Idade_Veiculo",
+          "rfe_ranking": 6,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Idade_Novo",
+          "rfe_ranking": 7,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Idade_Seminovo",
+          "rfe_ranking": 8,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Is_Novo",
+          "rfe_ranking": 9,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Eficiencia_Km",
+          "rfe_ranking": 10,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Km_Baixa",
+          "rfe_ranking": 11,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Km_por_Porta",
+          "rfe_ranking": 12,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Quilometragem_ZScore_Cluster",
+          "rfe_ranking": 13,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Idade_Veiculo_ZScore_Cluster",
+          "rfe_ranking": 14,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Sweet_Spot",
+          "rfe_ranking": 15,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Km_Media",
+          "rfe_ranking": 16,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Outlier_Score",
+          "rfe_ranking": 17,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Outlier_Methods",
+          "rfe_ranking": 18,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Intensidade_Uso",
+          "rfe_ranking": 19,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Is_Outlier",
+          "rfe_ranking": 20,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_Posicionamento_Premium",
+          "rfe_ranking": 21,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Modelo_Raridade",
+          "rfe_ranking": 22,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_Preco_Medio",
+          "rfe_ranking": 23,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_Volume",
+          "rfe_ranking": 24,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_Elasticidade",
+          "rfe_ranking": 25,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Is_Premium_Brand",
+          "rfe_ranking": 26,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca_Posicionamento_Intermediária",
+          "rfe_ranking": 27,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Faixa_Idade_Usado",
+          "rfe_ranking": 28,
+          "rfe_selected": false
+        },
+        {
+          "feature": "Marca",
+          "rfe_ranking": 29,
+          "rfe_selected": false
+        }
+      ],
+      "top_rf_features": [
+        {
+          "feature": "Outlier_Score",
+          "rf_importance": 0.135918068710807
+        },
+        {
+          "feature": "Idade_x_Km",
+          "rf_importance": 0.13342213573231776
+        },
+        {
+          "feature": "Km_por_Porta",
+          "rf_importance": 0.09643849950882619
+        },
+        {
+          "feature": "Distancia_Centroide",
+          "rf_importance": 0.08167000227695183
+        },
+        {
+          "feature": "Quilometragem_ZScore_Cluster",
+          "rf_importance": 0.08138109870917505
+        },
+        {
+          "feature": "Km_vs_Cluster",
+          "rf_importance": 0.07770076920952468
+        },
+        {
+          "feature": "Quilometragem",
+          "rf_importance": 0.07702105466787665
+        },
+        {
+          "feature": "Intensidade_Uso",
+          "rf_importance": 0.0477284440363209
+        },
+        {
+          "feature": "Marca_x_Idade",
+          "rf_importance": 0.04577395898019617
+        },
+        {
+          "feature": "Eficiencia_Km",
+          "rf_importance": 0.04273836992964289
+        }
+      ],
+      "rfe_selected_features": [
+        "Modelo",
+        "Ano",
+        "Quilometragem",
+        "Idade_x_Km",
+        "Idade_vs_Cluster",
+        "Km_vs_Cluster",
+        "Cluster_Size",
+        "Cluster",
+        "Cluster_Percentage",
+        "Cluster_Nome_Médio Seminovo"
+      ]
+    },
+    "group_analysis": {
+      "temporal": {
+        "n_features": 14,
+        "missing_features": [],
+        "avg_correlation": 0.033257309408273185,
+        "max_correlation": 0.08296746852225673,
+        "min_correlation": 0.002828903515250606
+      },
+      "brand": {
+        "n_features": 7,
+        "missing_features": [],
+        "avg_correlation": 0.03262955952536337,
+        "max_correlation": 0.06585811201489422,
+        "min_correlation": 0.0014226854419169665
+      },
+      "interaction": {
+        "n_features": 3,
+        "missing_features": [],
+        "avg_correlation": 0.06555310589212791,
+        "max_correlation": 0.08296746852225673,
+        "min_correlation": 0.04609275741831096
+      },
+      "categorical": {
+        "n_features": 9,
+        "missing_features": [],
+        "avg_correlation": 0.03251225880661182,
+        "max_correlation": 0.0588899521915861,
+        "min_correlation": 0.015103864046213184
+      },
+      "cluster": {
+        "n_features": 8,
+        "missing_features": [],
+        "avg_correlation": 0.0338167102986823,
+        "max_correlation": 0.06420470475314159,
+        "min_correlation": 0.002828903515250606
+      },
+      "outlier": {
+        "n_features": 3,
+        "missing_features": [],
+        "avg_correlation": 0.01655009403436941,
+        "max_correlation": 0.019442554010681866,
+        "min_correlation": 0.015103864046213184
+      }
+    },
+    "recommendations": [
+      "ATENÇÃO: Nenhuma feature apresenta correlação forte com o target. Considere feature engineering adicional.",
+      "Encontradas 13 features redundantes que podem ser removidas: Marca_Preco_Medio, Outlier_Methods, Cluster_Size, Cluster_Percentage, Idade_Veiculo...",
+      "Features com baixa estabilidade detectadas: 20. Considere regularização ou remoção."
+    ]
+  },
+  "cv_analysis": {
+    "model_performance": {
+      "LinearRegression": {
+        "test_mse": {
+          "mean": 27567294841.939198,
+          "std": 1452424694.664924
+        },
+        "test_mae": {
+          "mean": 46638.563636840576,
+          "std": 945.529438594706
+        },
+        "test_r2": {
+          "mean": 0.010018498582461777,
+          "std": 0.008098543027719958
+        },
+        "train_r2": {
+          "mean": 0.018060104351230934,
+          "std": 0.002050506433120502
+        },
+        "overfitting_score": 0.008041605768769156
+      },
+      "Ridge": {
+        "test_mse": {
+          "mean": 27566988115.849743,
+          "std": 1451792313.765112
+        },
+        "test_mae": {
+          "mean": 46624.652627954434,
+          "std": 942.6163994767438
+        },
+        "test_r2": {
+          "mean": 0.010028588293553376,
+          "std": 0.008074874232201585
+        },
+        "train_r2": {
+          "mean": 0.01805817450567897,
+          "std": 0.002050018279652647
+        },
+        "overfitting_score": 0.008029586212125595
+      },
+      "RandomForestRegressor": {
+        "test_mse": {
+          "mean": 30973841022.647327,
+          "std": 1748832741.5833304
+        },
+        "test_mae": {
+          "mean": 53846.00261039999,
+          "std": 2198.2481002782533
+        },
+        "test_r2": {
+          "mean": -0.11233625838218049,
+          "std": 0.024714540845142574
+        },
+        "train_r2": {
+          "mean": 0.8432165572366623,
+          "std": 0.002041406490755849
+        },
+        "overfitting_score": 0.9555528156188429
+      }
+    },
+    "feature_importance_cv": {},
+    "stability_analysis": {
+      "prediction_stability": {
+        "mean": 83054.54814244645,
+        "std": 22320.335609283487,
+        "coefficient_of_variation": 0.2687430864231457
+      },
+      "prediction_range": {
+        "min": 6470.167503289165,
+        "max": 168822.6169933975,
+        "range": 162352.44949010835
+      }
+    },
+    "learning_curves": {
+      "train_sizes": [
+        666,
+        1333,
+        1999,
+        2666,
+        3333,
+        3999,
+        4666,
+        5332,
+        5999,
+        6666
+      ],
+      "train_scores_mean": [
+        0.07813094999880284,
+        0.05219760806247128,
+        0.03267329354778847,
+        0.027011455821545922,
+        0.023735750316907,
+        0.023152327040521243,
+        0.02180815455230752,
+        0.021390837131896195,
+        0.020680932169658866,
+        0.019309439829544178
+      ],
+      "train_scores_std": [
+        0.015330675924850604,
+        0.006352259571832454,
+        0.0032615001472888335,
+        0.002329171048825187,
+        0.0037615901364334635,
+        0.0033988487594546375,
+        0.0019719682286533586,
+        0.002206697943089766,
+        0.0019293937292253662,
+        0.0018682432620258686
+      ],
+      "val_scores_mean": [
+        -0.05798495738010656,
+        -0.029165165061142712,
+        -0.007778289330726847,
+        -0.004560123509836848,
+        -0.0014440066352771435,
+        0.0016859169406089707,
+        0.0034702235856999275,
+        0.005516750677893849,
+        0.006388222562326591,
+        0.006878889105258061
+      ],
+      "val_scores_std": [
+        0.01543816861197066,
+        0.0069742462293434304,
+        0.004535864772412899,
+        0.003468657587257708,
+        0.004444844881633543,
+        0.0032175569404520716,
+        0.0016310047428577576,
+        0.003967926735127073,
+        0.003792851632328869,
+        0.003773167971830415
+      ],
+      "final_gap": 0.012430550724286116
+    }
+  },
+  "overall_assessment": {
+    "quality_score": 0,
+    "strengths": [],
+    "weaknesses": [
+      "Poucas features com correlação forte",
+      "Performance preditiva baixa",
+      "Muitas features redundantes"
+    ],
+    "recommendations": [
+      "Remover features redundantes"
+    ],
+    "overall_grade": "Requer melhorias"
+  }
+}

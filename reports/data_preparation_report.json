@@ -1,0 +1,227 @@
+{
+  "timestamp": "2025-09-29T11:14:04.292554",
+  "data_info": {
+    "original_shape": [
+      10000,
+      10
+    ],
+    "final_train_shape": [
+      7840,
+      33
+    ],
+    "final_test_shape": [
+      1961,
+      33
+    ],
+    "features_created": 24,
+    "total_features": 33
+  },
+  "transformations_applied": {
+    "feature_engineering": {
+      "temporal_features": [
+        "Idade_Veiculo",
+        "Eficiencia_Km"
+      ],
+      "interaction_features": [
+        "Idade_x_Km",
+        "Km_por_Porta"
+      ],
+      "categorical_derived": [
+        "Faixa_Idade",
+        "Faixa_Km"
+      ],
+      "brand_features": [
+        "Marca_Preco_Medio",
+        "Marca_Elasticidade",
+        "Marca_Volume"
+      ],
+      "boolean_features": [
+        "Is_Premium_Brand",
+        "Is_Automatic",
+        "Is_Flex",
+        "Is_4_Portas"
+      ]
+    },
+    "outlier_treatment": {
+      "method": "Cluster-based Isolation Forest",
+      "contamination_rate": 0.05,
+      "outliers_detected": "0"
+    },
+    "encoding_strategies": {
+      "Marca": "label",
+      "Modelo": "target",
+      "Cor": "label",
+      "Cambio": "onehot",
+      "Combustivel": "onehot",
+      "Cluster_Nome": "onehot",
+      "Faixa_Idade": "onehot",
+      "Faixa_Km": "onehot"
+    },
+    "scaling": "StandardScaler para variáveis numéricas"
+  },
+  "feature_quality": {
+    "top_correlations": [
+      {
+        "Feature": "Cluster_Nome_Luxury",
+        "Correlation": 0.9922650052892059
+      },
+      {
+        "Feature": "Cluster_Nome_Médio Seminovo",
+        "Correlation": 0.13086228334370653
+      },
+      {
+        "Feature": "Modelo",
+        "Correlation": 0.09464840205476809
+      },
+      {
+        "Feature": "Idade_x_Km",
+        "Correlation": 0.08724305549288995
+      },
+      {
+        "Feature": "Quilometragem",
+        "Correlation": 0.0827758162278282
+      },
+      {
+        "Feature": "Km_por_Porta",
+        "Correlation": 0.07098015012972626
+      },
+      {
+        "Feature": "Marca_Preco_Medio",
+        "Correlation": 0.06891049108434912
+      },
+      {
+        "Feature": "Faixa_Km_Muito_Alta",
+        "Correlation": 0.05923262191193244
+      },
+      {
+        "Feature": "Idade_Veiculo",
+        "Correlation": 0.05456165064624884
+      },
+      {
+        "Feature": "Ano",
+        "Correlation": 0.05456165064624884
+      }
+    ],
+    "top_mutual_info": [
+      {
+        "Feature": "Idade_x_Km",
+        "Mutual_Info": 0.46708104986282795
+      },
+      {
+        "Feature": "Cluster",
+        "Mutual_Info": 0.3332606966028988
+      },
+      {
+        "Feature": "Marca_Elasticidade",
+        "Mutual_Info": 0.294954679499452
+      },
+      {
+        "Feature": "Marca",
+        "Mutual_Info": 0.2945634313032457
+      },
+      {
+        "Feature": "Marca_Preco_Medio",
+        "Mutual_Info": 0.29320804881080553
+      },
+      {
+        "Feature": "Marca_Volume",
+        "Mutual_Info": 0.2923429763351222
+      },
+      {
+        "Feature": "Modelo",
+        "Mutual_Info": 0.28063505690007506
+      },
+      {
+        "Feature": "Modelo_Raridade",
+        "Mutual_Info": 0.27585402489666233
+      },
+      {
+        "Feature": "Quilometragem",
+        "Mutual_Info": 0.20877548362927545
+      },
+      {
+        "Feature": "Km_por_Porta",
+        "Mutual_Info": 0.17414467594735417
+      }
+    ],
+    "top_rf_importance": [
+      {
+        "Feature": "Cluster_Nome_Luxury",
+        "RF_Importance": 0.9847660637317845
+      },
+      {
+        "Feature": "Idade_x_Km",
+        "RF_Importance": 0.007116061394310032
+      },
+      {
+        "Feature": "Marca_Preco_Medio",
+        "RF_Importance": 0.00543503940978866
+      },
+      {
+        "Feature": "Cluster",
+        "RF_Importance": 0.0009721250438307989
+      },
+      {
+        "Feature": "Marca_Volume",
+        "RF_Importance": 0.0005054873760128998
+      },
+      {
+        "Feature": "Marca_Elasticidade",
+        "RF_Importance": 0.00044184393364870325
+      },
+      {
+        "Feature": "Quilometragem",
+        "RF_Importance": 0.00014384816293176261
+      },
+      {
+        "Feature": "Modelo_Raridade",
+        "RF_Importance": 0.0001279419326510452
+      },
+      {
+        "Feature": "Ano",
+        "RF_Importance": 8.859892716860607e-05
+      },
+      {
+        "Feature": "Idade_Veiculo",
+        "RF_Importance": 8.553419597869258e-05
+      }
+    ],
+    "correlation_stats": {
+      "mean": 0.06671136780722925,
+      "median": 0.029784037496253253,
+      "std": 0.17192429012492663,
+      "features_above_01": "2",
+      "features_above_02": "1"
+    }
+  },
+  "cluster_analysis": {
+    "clusters_identified": 4,
+    "cluster_names": {
+      "0.0": "Médio Seminovo",
+      "1.0": "Econômico Usado",
+      "2.0": "Luxury",
+      "3.0": "Médio Seminovo"
+    },
+    "cluster_distribution": {
+      "1.0": 3585,
+      "0.0": 3036,
+      "3.0": 2983,
+      "2.0": 197
+    }
+  },
+  "files_created": {
+    "models": [
+      "../models/cluster_info.pkl",
+      "../models/feature_engineer.pkl",
+      "../models/outlier_handler.pkl",
+      "../models/smart_encoder.pkl",
+      "../models/final_preprocessing_pipeline.pkl"
+    ],
+    "processed_data": [
+      "../data/processed/X_train_processed.npy",
+      "../data/processed/X_test_processed.npy",
+      "../data/processed/y_train.npy",
+      "../data/processed/y_test.npy"
+    ]
+  }
+}
