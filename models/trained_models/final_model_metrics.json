@@ -1,0 +1,19 @@
+{
+  "model_name": "CatBoost",
+  "metrics": {
+    "MAE": 5577.3556681871605,
+    "MSE": 597008269.1134301,
+    "RMSE": 24433.752661296836,
+    "R2": 0.9784403424304373,
+    "MAPE": 5.735680536739294
+  },
+  "training_time": 36.13768029212952,
+  "best_params": {
+    "learning_rate": 0.1,
+    "l2_leaf_reg": 1,
+    "iterations": 300,
+    "depth": 4,
+    "border_count": 32,
+    "bagging_temperature": 0.5
+  }
+}
