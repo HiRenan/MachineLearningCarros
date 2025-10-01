@@ -1,0 +1,7 @@
+Modelo,MAE (R$),RMSE (R$),R²,Melhores Parâmetros
+Lasso,2527.4564003817886,2917.8030592899418,0.9803337148959012,{'alpha': 1.0}
+Ridge,2528.621992537394,2919.7418016480515,0.980307571577614,{'alpha': 1.0}
+XGBoost,2600.4039078767564,3058.3697169722536,0.9783932050813475,"{'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200}"
+Gradient Boosting,2609.8190263291817,3063.990866303523,0.9783137074100017,"{'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200}"
+LightGBM,2611.795726362992,3085.47057679023,0.9780085837490129,"{'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 31}"
+Random Forest,2746.9228933234745,3293.2949133913794,0.9749463141765587,"{'max_depth': None, 'min_samples_split': 5, 'n_estimators': 200}"
