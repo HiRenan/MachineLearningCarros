@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: carros-api
+    rootDir: backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PROJECT_ROOT
+        value: /opt/render/project/src
+      - key: MODELS_DIR
+        value: /opt/render/project/src/models/trained_models
+
+  - type: static
+    name: carros-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://carros-api.onrender.com
