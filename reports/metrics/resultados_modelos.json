@@ -1,70 +1,73 @@
 [
   {
     "Modelo":"Lasso",
-    "MAE (R$)":2527.4564003818,
-    "RMSE (R$)":2917.8030592899,
-    "R\u00b2":0.9803337149,
+    "MAE (R$)":2521.0771688074,
+    "RMSE (R$)":2911.3188541619,
+    "R\u00b2":0.9804210262,
     "Melhores Par\u00e2metros":{
-      "alpha":1.0
+      "alpha":10.0
     },
-    "MLflow Run ID":"185fb6692f7d431f9a85661bb6b018f9"
+    "MLflow Run ID":"b17dc6c13ed4454d98b10ec1a9dd6e4f"
   },
   {
     "Modelo":"Ridge",
-    "MAE (R$)":2528.6219925374,
-    "RMSE (R$)":2919.7418016481,
-    "R\u00b2":0.9803075716,
+    "MAE (R$)":2528.4153071947,
+    "RMSE (R$)":2919.3762514784,
+    "R\u00b2":0.9803125022,
     "Melhores Par\u00e2metros":{
       "alpha":1.0
     },
-    "MLflow Run ID":"d496d0e81c4245388699aa9eba1a535f"
+    "MLflow Run ID":"afbeba18037d44d38e1f3336d2ebfff7"
   },
   {
     "Modelo":"XGBoost",
-    "MAE (R$)":2600.4039078768,
-    "RMSE (R$)":3058.3697169723,
-    "R\u00b2":0.9783932051,
+    "MAE (R$)":2581.5844135338,
+    "RMSE (R$)":3012.5692117646,
+    "R\u00b2":0.979035503,
     "Melhores Par\u00e2metros":{
-      "learning_rate":0.1,
+      "colsample_bytree":1.0,
+      "learning_rate":0.05,
       "max_depth":3,
-      "n_estimators":200
+      "n_estimators":600,
+      "subsample":0.8
     },
-    "MLflow Run ID":"c75d0e9478974cd986ba939b49d109d2"
+    "MLflow Run ID":"6988d6a998c1450584844a294945baba"
   },
   {
     "Modelo":"Gradient Boosting",
-    "MAE (R$)":2609.8190263292,
-    "RMSE (R$)":3063.9908663035,
-    "R\u00b2":0.9783137074,
+    "MAE (R$)":2609.8313425401,
+    "RMSE (R$)":3051.1304465116,
+    "R\u00b2":0.9784953721,
     "Melhores Par\u00e2metros":{
-      "learning_rate":0.1,
+      "learning_rate":0.05,
       "max_depth":3,
-      "n_estimators":200
+      "n_estimators":400
     },
-    "MLflow Run ID":"96265df37b774367a6700ccc2399b4b2"
+    "MLflow Run ID":"7775432fc28346cfb9224a8d0f88cb36"
   },
   {
     "Modelo":"LightGBM",
-    "MAE (R$)":2611.795726363,
-    "RMSE (R$)":3085.4705767902,
-    "R\u00b2":0.9780085837,
+    "MAE (R$)":2589.4276290518,
+    "RMSE (R$)":3059.2159128943,
+    "R\u00b2":0.978381247,
     "Melhores Par\u00e2metros":{
       "learning_rate":0.05,
-      "n_estimators":200,
+      "min_child_samples":40,
+      "n_estimators":300,
       "num_leaves":31
     },
-    "MLflow Run ID":"41e5b9a8dd8e48c0909a3f2d2749806f"
+    "MLflow Run ID":"bc58ba2ce8a64b75ad82034ea2ac6fb5"
   },
   {
     "Modelo":"Random Forest",
-    "MAE (R$)":2746.9228933235,
-    "RMSE (R$)":3293.2949133914,
-    "R\u00b2":0.9749463142,
+    "MAE (R$)":2725.1578204111,
+    "RMSE (R$)":3264.0836490999,
+    "R\u00b2":0.9753887915,
     "Melhores Par\u00e2metros":{
-      "max_depth":null,
+      "max_depth":20,
       "min_samples_split":5,
-      "n_estimators":200
+      "n_estimators":400
     },
-    "MLflow Run ID":"1e0b2d1e0a394803a55d592f50995501"
+    "MLflow Run ID":"482e800c69e24127baea5a9c956e626e"
   }
 ]
