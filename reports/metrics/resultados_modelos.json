@@ -1,0 +1,70 @@
+[
+  {
+    "Modelo":"Lasso",
+    "MAE (R$)":2527.4564003818,
+    "RMSE (R$)":2917.8030592899,
+    "R\u00b2":0.9803337149,
+    "Melhores Par\u00e2metros":{
+      "alpha":1.0
+    },
+    "MLflow Run ID":"185fb6692f7d431f9a85661bb6b018f9"
+  },
+  {
+    "Modelo":"Ridge",
+    "MAE (R$)":2528.6219925374,
+    "RMSE (R$)":2919.7418016481,
+    "R\u00b2":0.9803075716,
+    "Melhores Par\u00e2metros":{
+      "alpha":1.0
+    },
+    "MLflow Run ID":"d496d0e81c4245388699aa9eba1a535f"
+  },
+  {
+    "Modelo":"XGBoost",
+    "MAE (R$)":2600.4039078768,
+    "RMSE (R$)":3058.3697169723,
+    "R\u00b2":0.9783932051,
+    "Melhores Par\u00e2metros":{
+      "learning_rate":0.1,
+      "max_depth":3,
+      "n_estimators":200
+    },
+    "MLflow Run ID":"c75d0e9478974cd986ba939b49d109d2"
+  },
+  {
+    "Modelo":"Gradient Boosting",
+    "MAE (R$)":2609.8190263292,
+    "RMSE (R$)":3063.9908663035,
+    "R\u00b2":0.9783137074,
+    "Melhores Par\u00e2metros":{
+      "learning_rate":0.1,
+      "max_depth":3,
+      "n_estimators":200
+    },
+    "MLflow Run ID":"96265df37b774367a6700ccc2399b4b2"
+  },
+  {
+    "Modelo":"LightGBM",
+    "MAE (R$)":2611.795726363,
+    "RMSE (R$)":3085.4705767902,
+    "R\u00b2":0.9780085837,
+    "Melhores Par\u00e2metros":{
+      "learning_rate":0.05,
+      "n_estimators":200,
+      "num_leaves":31
+    },
+    "MLflow Run ID":"41e5b9a8dd8e48c0909a3f2d2749806f"
+  },
+  {
+    "Modelo":"Random Forest",
+    "MAE (R$)":2746.9228933235,
+    "RMSE (R$)":3293.2949133914,
+    "R\u00b2":0.9749463142,
+    "Melhores Par\u00e2metros":{
+      "max_depth":null,
+      "min_samples_split":5,
+      "n_estimators":200
+    },
+    "MLflow Run ID":"1e0b2d1e0a394803a55d592f50995501"
+  }
+]
