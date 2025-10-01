@@ -14,8 +14,9 @@ services:
       - key: MODELS_DIR
         value: /opt/render/project/src/models/trained_models
 
-  - type: static
+  - type: web
     name: carros-frontend
+    env: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
