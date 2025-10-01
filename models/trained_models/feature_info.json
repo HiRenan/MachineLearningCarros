@@ -57,5 +57,7 @@
   "modelo": "Lasso",
   "parametros": {
     "alpha": 1.0
-  }
+  },
+  "mlflow_registered": true,
+  "model_registry_name": "PredicaoCarros_Lasso_Campeao"
 }
