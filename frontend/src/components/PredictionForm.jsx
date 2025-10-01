@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getMarcas, getModelos, getCores, getCambios, getCombustiveis, predictPrice } from '../services/api';
+import CarVisualization from './CarVisualization';
 
 const PredictionForm = ({ onPrediction, onLoading }) => {
   const [formData, setFormData] = useState({
@@ -120,6 +121,12 @@ const PredictionForm = ({ onPrediction, onLoading }) => {
   return (
     <form className="prediction-form" onSubmit={handleSubmit}>
       <h2>Dados do Veículo</h2>
+
+      <CarVisualization
+        marca={formData.marca}
+        modelo={formData.modelo}
+        cor={formData.cor}
+      />
 
       <div className="form-grid">
         <div className="form-group">

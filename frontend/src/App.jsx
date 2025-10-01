@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import Header from './components/Header';
 import Disclaimer from './components/Disclaimer';
 import PredictionForm from './components/PredictionForm';
 import ResultCard from './components/ResultCard';
 import ModelInfo from './components/ModelInfo';
+import { useTheme } from './hooks/useTheme';
 import './App.css';
 
 function App() {
   const [prediction, setPrediction] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const handlePrediction = (data) => {
     setPrediction(data);
@@ -19,10 +22,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Predição de Preços de Veículos</h1>
-        <p className="subtitle">Sistema de estimativa de valores no mercado brasileiro</p>
-      </header>
+      <Header theme={theme} toggleTheme={toggleTheme} />
 
       <Disclaimer />
 

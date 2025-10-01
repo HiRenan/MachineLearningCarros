@@ -7,7 +7,9 @@ Interface web desenvolvida com React + Vite para predição de valores de venda 
 - React 18
 - Vite 5
 - Axios (requisições HTTP)
-- CSS3 (gradientes, grid, flexbox)
+- React Icons (ícones)
+- Pexels API (imagens de carros)
+- CSS3 (gradientes, grid, flexbox, animações)
 
 ## Instalação
 
@@ -24,11 +26,18 @@ Crie um arquivo `.env` baseado no `.env.example`:
 cp .env.example .env
 ```
 
-Edite o arquivo `.env` e configure a URL da API:
+Edite o arquivo `.env` e configure:
 
 ```
 VITE_API_URL=http://localhost:8000
+VITE_PEXELS_API_KEY=your_pexels_api_key_here
 ```
+
+**Para obter sua chave Pexels API:**
+1. Acesse https://www.pexels.com/api/
+2. Crie uma conta gratuita
+3. Gere sua API key
+4. Consulte [PEXELS_SETUP.md](PEXELS_SETUP.md) para instruções detalhadas
 
 ## Execução
 
@@ -77,6 +86,16 @@ frontend/
 ```
 
 ## Funcionalidades
+
+### Visualização Dinâmica de Carros
+- Imagens reais de carros (Pexels API)
+- Atualização em tempo real ao mudar marca/modelo/cor
+- Sistema de fallback inteligente:
+  1. Imagem real do carro
+  2. Placeholder colorido dinâmico
+  3. Ícone SVG de fallback
+- Animações suaves de transição
+- Cache de imagens (10 minutos)
 
 ### Formulário de Predição
 - Seleção de marca com atualização dinâmica de modelos
