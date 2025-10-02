@@ -4,11 +4,13 @@ API REST desenvolvida com FastAPI para predição de valores de venda de veícul
 
 ## Tecnologias
 
-- FastAPI 0.104.1
-- Uvicorn (servidor ASGI)
-- Pydantic (validação de dados)
-- Scikit-learn (modelo ML)
-- Python 3.9+
+- FastAPI 0.115.0
+- Uvicorn 0.32.0 (servidor ASGI)
+- Pydantic 2.9.0 (validação de dados)
+- Scikit-learn 1.5.2 (modelo ML)
+- Pandas 2.2.3
+- NumPy 2.1.2
+- Python 3.9+ (testado em 3.13)
 
 ## Instalação
 
@@ -22,13 +24,34 @@ pip install -r requirements.txt
 ### Modo Desenvolvimento
 
 ```bash
-uvicorn app.main:app --reload --port 8000
+python -m uvicorn app.main:app --reload --port 8000
+```
+
+**Windows (se uvicorn não estiver no PATH):**
+```bash
+python -m uvicorn app.main:app --reload
 ```
 
 ### Modo Produção
 
 ```bash
-python -m app.main
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+## Troubleshooting
+
+### Erro: `uvicorn: command not found`
+
+Se o comando `uvicorn` não for encontrado (comum no Windows), use:
+```bash
+python -m uvicorn app.main:app --reload
+```
+
+### Erro: `Could not import module "main"`
+
+Certifique-se de estar no diretório `backend/` e use:
+```bash
+python -m uvicorn app.main:app --reload
 ```
 
 ## Endpoints

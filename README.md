@@ -1,7 +1,7 @@
 # Predição de Preços de Veículos no Mercado Brasileiro
 
 ![Status](https://img.shields.io/badge/Status-Em%20Produção-success)
-![Python](https://img.shields.io/badge/Python-3.9.18-blue)
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688)
 ![React](https://img.shields.io/badge/React-19.1.1-61DAFB)
 ![ML](https://img.shields.io/badge/ML-Scikit--Learn-orange)
@@ -109,15 +109,17 @@ DesafioFinalML/
 ## Tecnologias Utilizadas
 
 ### Machine Learning & Data Science
-- **Python 3.9.18**: Linguagem base
-- **Pandas 2.1.4**: Manipulação de dados
-- **NumPy 1.24.3**: Computação numérica
-- **Scikit-learn 1.3.2**: Algoritmos de ML
-- **XGBoost 2.0.3**: Gradient boosting
-- **LightGBM 4.1.0**: Gradient boosting eficiente
-- **MLflow 2.8.1**: Rastreamento de experimentos
+
+- **Python 3.9+** (testado em 3.9.18 e 3.13): Linguagem base
+- **Pandas ≥2.2.0**: Manipulação de dados
+- **NumPy ≥2.0.0**: Computação numérica
+- **Scikit-learn ≥1.3.0**: Algoritmos de ML
+- **XGBoost ≥2.0.0**: Gradient boosting
+- **LightGBM ≥4.1.0**: Gradient boosting eficiente
+- **MLflow ≥2.8.0**: Rastreamento de experimentos
 
 ### Backend
+
 - **FastAPI 0.115.0**: Framework web moderno
 - **Uvicorn 0.32.0**: Servidor ASGI
 - **Pydantic 2.9.0**: Validação de dados
@@ -125,12 +127,14 @@ DesafioFinalML/
 - **Joblib 1.4.2**: Serialização de modelos
 
 ### Frontend
+
 - **React 19.1.1**: Biblioteca UI
 - **Vite 7.1.7**: Build tool
 - **Axios 1.12.2**: Cliente HTTP
 - **React Icons 5.5.0**: Ícones
 
 ### DevOps & Deploy
+
 - **Render**: Plataforma de deploy
 - **Git**: Controle de versão
 - **Jupyter Notebook**: Desenvolvimento interativo
@@ -168,8 +172,10 @@ cd backend
 pip install -r requirements.txt
 
 # Executar servidor
-uvicorn app.main:app --reload --port 8000
+python -m uvicorn app.main:app --reload --port 8000
 ```
+
+**Windows:** Se o comando `uvicorn` não funcionar, use `python -m uvicorn app.main:app --reload`
 
 Acesse: http://localhost:8000/docs (Swagger UI)
 
@@ -190,6 +196,7 @@ Acesse: http://localhost:5173
 ## API REST - Endpoints
 
 ### Base URL (Produção)
+
 ```
 https://carros-backend.onrender.com
 ```
@@ -197,11 +204,13 @@ https://carros-backend.onrender.com
 ### Endpoints Disponíveis
 
 #### 1. Health Check
+
 ```http
 GET /api/health
 ```
 
 **Resposta:**
+
 ```json
 {
   "status": "healthy",
@@ -211,23 +220,26 @@ GET /api/health
 ```
 
 #### 2. Informações do Modelo
+
 ```http
 GET /api/model-info
 ```
 
 **Resposta:**
+
 ```json
 {
   "nome_modelo": "Lasso Regression",
   "r2_score": 0.9803,
   "mae": 2527.46,
-  "rmse": 2917.80,
+  "rmse": 2917.8,
   "total_features": 52,
   "descricao": "Modelo campeão com regularização L1"
 }
 ```
 
 #### 3. Predição de Preço
+
 ```http
 POST /api/predict
 Content-Type: application/json
@@ -245,9 +257,10 @@ Content-Type: application/json
 ```
 
 **Resposta:**
+
 ```json
 {
-  "valor_predito": 95000.50,
+  "valor_predito": 95000.5,
   "valor_minimo": 92473.04,
   "valor_maximo": 97527.96,
   "confianca": "alta"
@@ -293,11 +306,13 @@ GET /api/options/combustiveis # Tipos de combustível
 ## Pipeline de Machine Learning (CRISP-DM)
 
 ### 1. Business Understanding
+
 - Objetivo: Predizer valor de venda de veículos usados
 - Métrica de sucesso: R² > 0.95
 - Aplicação: Auxiliar compradores e vendedores na precificação
 
 ### 2. Data Understanding
+
 - **Dataset**: 10.000 registros, 9 variáveis
 - **Marcas**: 10 fabricantes (Ford, Hyundai, Jeep, Toyota, Nissan, Fiat, Honda, Chevrolet, Volkswagen, Renault)
 - **Modelos**: 32 modelos diferentes
@@ -306,26 +321,31 @@ GET /api/options/combustiveis # Tipos de combustível
 ### 3. Data Preparation
 
 **Limpeza de Dados:**
+
 - Remoção de 100 registros com valores nulos na coluna `Ano`
 - Remoção de 99 registros com "erro_medicao" em `Quilometragem`
 - Conversão de tipos: Ano → int, Quilometragem → float
 
 **Tratamento de Outliers:**
+
 - Aplicação de método IQR (Interquartile Range) agrupado por marca
 - Remoção de 198 outliers (9.801 → 9.603 registros)
 - Preservação da distribuição natural de preços por marca
 
 **Feature Engineering:**
+
 - `Idade_Veiculo`: Ano atual - Ano de fabricação
 - `Km_por_Ano`: Quilometragem / (Idade_Veiculo + 1)
 
 **Encoding:**
+
 - One-Hot Encoding para variáveis categóricas (Marca, Modelo, Cor, Cambio, Combustivel)
 - 52 features finais após encoding
 
 ### 4. Modeling
 
 **Algoritmos Testados:**
+
 1. Linear Regression (baseline)
 2. Ridge Regression (regularização L2)
 3. **Lasso Regression (regularização L1) - CAMPEÃO**
@@ -336,6 +356,7 @@ GET /api/options/combustiveis # Tipos de combustível
 8. LightGBM
 
 **Otimização:**
+
 - GridSearchCV com validação cruzada (cv=5)
 - Métrica de otimização: R² Score
 - Paralelização (n_jobs=-1)
@@ -343,11 +364,13 @@ GET /api/options/combustiveis # Tipos de combustível
 ### 5. Evaluation
 
 **Métricas Utilizadas:**
+
 - **R² Score**: Coeficiente de determinação
 - **MAE**: Mean Absolute Error (erro médio em R$)
 - **RMSE**: Root Mean Squared Error (penaliza erros grandes)
 
 **Análise de Importância:**
+
 - Gráficos gerados para 6 modelos
 - Salvos em `reports/figures/`
 - Principais features: Modelo, Marca, Quilometragem, Idade do Veículo
@@ -355,12 +378,14 @@ GET /api/options/combustiveis # Tipos de combustível
 ### 6. Deployment
 
 **Arquitetura em Produção:**
+
 - Frontend React hospedado no Render
 - Backend FastAPI hospedado no Render
 - Comunicação via API REST (HTTPS)
 - Modelo serializado carregado em memória
 
 **Artefatos Gerados:**
+
 - Modelo serializado: `models/trained_models/lasso_modelo_campeao.pkl`
 - Informações de features: `models/trained_models/feature_info.json`
 - Métricas: `reports/metrics/resultados_modelos.{csv,json}`
@@ -383,6 +408,7 @@ Acesse: **http://localhost:5000**
 ### O que é Rastreado
 
 **Para cada modelo treinado:**
+
 - Hiperparâmetros otimizados (GridSearchCV)
 - Métricas de performance (MAE, RMSE, R²)
 - Informações do dataset (tamanho, features)
@@ -390,6 +416,7 @@ Acesse: **http://localhost:5000**
 - Configurações de treinamento (CV folds, random_state)
 
 **Experimentos disponíveis:**
+
 - Ridge Regression (GridSearch)
 - Lasso Regression (GridSearch)
 - Random Forest (GridSearch)
@@ -464,11 +491,13 @@ print(f"Preço estimado: R$ {preco_predito[0]:,.2f}")
 ### Configurações de Deploy
 
 **Frontend:**
+
 - Build Command: `npm install && npm run build`
 - Publish Directory: `dist`
 - Node Version: 20.x
 
 **Backend:**
+
 - Build Command: `pip install -r requirements.txt`
 - Start Command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 - Python Version: 3.9.18 (definido em runtime.txt)
@@ -476,11 +505,13 @@ print(f"Preço estimado: R$ {preco_predito[0]:,.2f}")
 ### Variáveis de Ambiente
 
 **Frontend:**
+
 ```env
 VITE_API_URL=https://carros-backend.onrender.com
 ```
 
 **Backend:**
+
 ```env
 MODEL_PATH=/opt/render/project/src/models/trained_models/lasso_modelo_campeao.pkl
 ```
@@ -547,8 +578,36 @@ Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE pa
 
 ---
 
-**Desenvolvido por**: Renan & Nathan
+**Desenvolvido por**: Renan Mocelin, Nathan Arrais, Lucas Porfilio, João Casemiro
 **Instituição**: Projeto Educacional de Machine Learning
-**Ano**: 2024
+**Ano**: 2025
 **Status**: Em Produção
-**Última Atualização**: Outubro 2024
+**Última Atualização**: Outubro 2025
+
+## Troubleshooting
+
+### Problemas com Instalação de Dependências (Windows)
+
+Se você encontrar erros ao instalar dependências no Windows (especialmente com Python 3.13), o `requirements.txt` foi atualizado para usar versões flexíveis (≥) que são compatíveis com versões mais recentes do Python.
+
+**Erro com numpy/pandas:**
+
+```bash
+# Solução: O requirements.txt já usa versões flexíveis
+pip install -r requirements.txt
+```
+
+**Erro "uvicorn: command not found":**
+
+```bash
+# Use o Python para executar o uvicorn
+python -m uvicorn app.main:app --reload
+```
+
+**Erro no Jupyter "ModuleNotFoundError":**
+
+```bash
+# Instale no ambiente correto do Jupyter
+python -m pip install numpy pandas matplotlib seaborn scikit-learn
+# Depois reinicie o kernel do Jupyter
+```

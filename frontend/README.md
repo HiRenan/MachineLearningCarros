@@ -4,11 +4,11 @@ Interface web desenvolvida com React + Vite para predição de valores de venda 
 
 ## Tecnologias
 
-- React 18
-- Vite 5
-- Axios (requisições HTTP)
-- React Icons (ícones)
-- Pexels API (imagens de carros)
+- React 19.1.1
+- Vite 7.1.7
+- Axios 1.12.2 (requisições HTTP)
+- React Icons 5.5.0 (ícones)
+- Pexels API (imagens de carros - opcional)
 - CSS3 (gradientes, grid, flexbox, animações)
 
 ## Instalação
@@ -204,6 +204,7 @@ netlify deploy --prod
 ## Variáveis de Ambiente
 
 - `VITE_API_URL`: URL base da API (default: http://localhost:8000)
+- `VITE_PEXELS_API_KEY`: Chave da API Pexels (opcional - usa fallback se não configurado)
 
 ## Performance
 
